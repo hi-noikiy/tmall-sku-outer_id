@@ -1,0 +1,97 @@
+{% extends "app/layout.html" %}
+
+{% block content %}
+
+ {% include 'app/head2.html' %}
+
+
+
+
+
+<div class="container col-lg-12" style="margin-top: 50px">
+	<div class="row" id="commodity">
+
+
+{%if not clothe%}
+
+	<div class="text-center" id="download">
+		<p class="lead">暂时并没有待生产产品</p>
+
+{%else%}
+	{%for x in clothe%}
+			<div class="col-lg-2 col-sm-2 col-md-2">
+			 <a href="#" class="thumbnail">
+		         <img src="{%url 'show_img'%}?id={{x.id}}"style="width:90px;height:90px;" 
+		         alt="主图">
+		      </a>
+		</div>
+		<div class="col-lg-8 col-md-8 col-sm-8">
+			<div class="title">
+				<p>{{x.name}}</p>					
+			</div>
+			<div class="outer">
+				<p >整体外部编码:{{comm.od_outer_id}}</p>	
+				{%if x.onsale%}	
+				<p class="col-lg-6">衣服类型
+				<span class="glyphicon glyphicon-ok" style="color:lime;"></span></p>	
+				{%endif%}{%if x.pic%}
+				<p class="col-lg-6">材料类型
+				<span class="glyphicon glyphicon-remove"  style="color:red;"></span></p>
+				{%endif%}
+				</div>
+			</div>
+	{%endfor%}
+
+{%endif%}
+
+
+	</div>
+			
+		</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{% endblock %}
+
+
+{% block scripts %}
+<script type="text/javascript">	
+$(function(){
+
+
+	$(".sync").click(function(){	
+	if(confirm("这里是更新全部商品列表,可能会消耗大量时间,\n 请问要继续吗?")){
+		$(this).attr({"disabled":"disabled"}).text("正在下载商品");
+
+		$.ajax({
+			url:"{%url 'sync'%}",
+			type:"get",
+			dataType:"html",
+			success:function(req){
+		
+				$("#commodity").append($(req));
+				$("#download").remove();
+				
+			}
+		});
+
+		};
+	});
+$(".commodity-detail").addClass("active");
+})
+</script>
+
+{% endblock %}

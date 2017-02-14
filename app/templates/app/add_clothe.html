@@ -1,0 +1,262 @@
+{% extends "app/layout.html" %}
+{% block content %}
+{% include 'app/clothe_head.html'%}
+<div class="container col-lg-12" style="margin-top: 50px">
+	<div class="row" >
+		<div class="col-lg-12 col-md-12  col-sm-12">
+				<h3 class="text-center">新建产品</h3>
+			<div class="alert alert-danger" style="display:none">				 
+			   <strong id="error-title">警告！</strong><small id="error-message">您的网络连接有问题。</small>
+			</div>
+				<form action="javascript:vice(0)" method="post" accept-charset="utf-8">
+					{% csrf_token %}
+					 <div class="form-group form-inline col-md-offset-4 col-md-8"id="clothenames">
+					     <input class="form-control" id="clothename" maxlength="254" name="clothename" placeholder="产品名" type="text" style="width: 120px;">
+						 <input class="form-control" id="clothecode" maxlength="254" name="clothecode" placeholder="产品编号" type="text" style="width: 120px;">
+					 </div>
+					 <div class="form-group form-inline col-md-offset-4 col-md-8 " id="colors">	 	 
+					     <div  class="input-group"> 	     	
+							<input class="form-control " id="id_add_color" style="width: 120px;" maxlength="254" name="add_color" placeholder="颜色(中文颜色)"type="text">
+							<input class="form-control " id="colorcode" maxlength="254"  style="width: 120px;"  name="colorcode" placeholder="颜色代码(两位数字)" type="text">
+							<span id="colorcode-add" class="input-group-addon btn ">添加</span></div><br>
+							  <select name="color" id="color-tag" size="7" class="form-control"style="width: 280px;margin:10px" > </select>	
+					     	</div>
+					 <div class="form-group form-inline col-md-offset-4 col-md-8" id="sizes">	 	    
+					     <div  class="input-group"> 	     	
+						     <input class="form-control" id="id_add_size" maxlength="254" style="width: 120px;" name="add_color" placeholder="尺码" type="text">
+						     <input class="form-control" id="sizecode" maxlength="254" style="width: 120px;" name="sizecode" placeholder="尺码代码" type="text">
+						     <span id="sizecode-add" class="input-group-addon btn">添加</span></div> <br>
+						     <select name="size" id="size-tag" size="7" class="form-control"style="width: 280px;margin:10px;" > </select>    
+					 </div>    
+
+					  <div class="form-group text-center" style="margin: 30px">
+					  	<a id="cel" class="btn btn-default">
+					      取消
+					    </a>   
+					   <a id="submit" class="btn btn-primary">
+					      保存
+					    </a>   
+					  </div>
+					     
+				</form>
+			</div>
+		</div>
+	</div>
+
+
+
+
+
+
+
+
+
+
+
+
+{% endblock %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{% block scripts %}
+<script>
+var color_data = {},size_data = {};
+
+
+
+
+
+$(function() {
+	$("#sizecode-add,#colorcode-add").click(function() {
+		var cn = $("#clothename").val(),
+			cc = $("#clothecode").val();
+		if (cc == "" || cn == "") {
+			$("#clothenames").addClass("has-error");
+		};
+	});
+
+			$("#colorcode-add").click(function() {
+				var name = $("#id_add_color").val(),
+					code = $("#colorcode").val();
+				
+				if (name == "" || code == "") {
+					$("#colors").addClass("has-error");
+					setTimeout(function() {
+						$("#colors").removeClass("has-error");
+					}, 2000);
+					return
+				};
+
+				if (name in color_data  ) {
+					error_warring("颜色名已存在!");
+					return				
+				};
+
+					$("#colorcode").val(""),
+					$("#id_add_color").val("");
+
+
+
+				var a = $("<option />").dblclick(delatecolo).attr("value", name)
+					.text(name+"------"+code);				
+				$("#color-tag").append(a);
+							color_data[name] = code;
+			});
+
+
+
+				$("#sizecode-add").click(function() {
+				var name = $("#id_add_size").val(),
+					code = $("#sizecode").val();
+					 
+				if (name == "" || code == "") {
+					$("#sizes").addClass("has-error");
+					setTimeout(function() {
+						$("#sizes").removeClass("has-error");
+					}, 2000);
+					return
+				};
+
+				if (name in size_data) {
+					error_warring("尺寸名已存在!!")
+					return
+				};
+
+					$("#id_add_size").val(""),
+					$("#sizecode").val("");
+
+				var a = $("<option />").attr("value", name)
+					.text(name+"------"+code).bind("dblclick",delatesize);
+
+				
+				$("#size-tag").append(a);
+				size_data[name] = code;
+
+
+
+			});
+
+
+
+
+
+
+function error_warring(msg){
+		$("#error-message").text(msg);
+		$(".alert-danger").show();
+	setTimeout(function() {
+		$(".alert-danger").hide();
+		}, 1000);
+	return}
+
+
+
+
+
+function delatecolo(e){
+	
+	var name = $(this).val();		
+				delete color_data[name];
+				$(this).remove();
+			};
+
+function delatesize(){
+	var name = $(this).val();		
+				delete size_data[name];
+				$(this).remove();};
+
+
+
+$("#cel").click(function(){
+
+$('#add_clothe').modal('hide')
+
+});
+
+
+
+$(".add-clothe").addClass("active");
+
+
+
+
+$("#submit").click(function(){
+	$.ajax({
+		url:"{%url 'addclothe'%}",
+		data:{
+			csrfmiddlewaretoken:$("input[name='csrfmiddlewaretoken']").val(),
+			color:JsonToString(color_data),
+			size:JsonToString(size_data),
+			name:$("#clothename[name='clothename']").val(),
+			code :$("#clothecode").val()
+		},
+		dataType:"json",
+		type:"post",
+		success:function(req){
+			if (req["code"]=="ok") {
+					history.go(0) 	}else{
+							$("#error-message").text(req['message']);
+					$(".alert-danger").show();
+					setTimeout(function() {
+						$(".alert-danger").hide();
+					}, 2000);
+					return
+					};
+
+		}
+
+
+
+
+	})
+
+
+
+
+})
+
+
+
+
+
+
+
+	})
+
+function JsonToString(o) {    
+    var arr = []; 
+    var fmt = function(s) { 
+        if (typeof s == 'object' && s != null) return JsonToStr(s); 
+        return /^(string|number)$/.test(typeof s) ? "\""+ s + "\"" : s; 
+    } 
+    for (var i in o) 
+         arr.push("\"" + i + "\":" + fmt(o[i])); 
+    return "{" + arr.join(',') + "}"; 
+} 
+
+
+
+
+</script>
+
+{% endblock %}

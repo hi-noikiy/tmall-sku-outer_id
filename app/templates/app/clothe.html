@@ -1,0 +1,80 @@
+{% extends "app/layout.html" %}
+
+{% block content %}
+{% include 'app/clothe_head.html' %}
+
+
+<div class="container col-lg-12" style="margin-top: 50px">
+	<div class="row" id="commodity">
+		{%if not clothe%}
+		<div class="text-center" id="download">
+			<p class="lead">您还没有新建产品</p>
+			<a href="{%url 'addclothe'%}"  class="btn btn-default btn-lg  add_clothe">新建商品材料</a>
+			{%else%}
+			<div class="well ">		
+				<table class="table table-striped table-bordered table-condensed">
+					<thead>
+						<tr>
+							<th>名称</th>
+							<th>编码</th>		
+							<th>颜色数目</th>
+							<th>尺码数目</th>
+							<th>操作</th>
+						</tr>
+					</thead>
+					<tbody>
+						{%for x in clothe%}
+							<tr>
+								<td>{{x.name}}</td>
+								<td>{{x.value}}</td>
+								<td>{{x.color.all.count}}</td>
+								<td>{{x.size.all.count}}</td>
+								<td><a href="#" class="btn btn-default" title="">修改</a><a href="#"class="btn btn-danger" title="">删除</a></td>
+							</tr>
+						{%endfor%}
+					</tbody>
+				</table>
+			{%endif%}
+
+			</div>
+
+		</div>
+	</div>
+</div>
+
+
+
+
+
+
+
+{% endblock %}
+
+
+{% block scripts %}
+<script type="text/javascript">	
+$(function(){
+
+	$(".sync").click(function(){	
+	if(confirm("这里是更新全部商品列表,可能会消耗大量时间,\n 请问要继续吗?")){
+		$(this).attr({"disabled":"disabled"}).text("正在下载商品");
+
+		$.ajax({
+			url:"{%url 'sync'%}",
+			type:"get",
+			dataType:"html",
+			success:function(req){
+		
+				$("#commodity").append($(req));
+				$("#download").remove();
+				
+			}
+		});
+
+		};
+	});
+$(".clothe-all").addClass("active");
+})
+</script>
+
+{% endblock %}

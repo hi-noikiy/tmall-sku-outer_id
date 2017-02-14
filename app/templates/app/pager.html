@@ -1,0 +1,6 @@
+<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="padding:0px;margin:0px;">
+	<ul class="pager">
+		<li><a href="{{request.path}}?page={{ page|add:-1}}&wd={{request.GET.wd}}&types={{request.GET.types}}&onsale={{request.GET.onsale}}">&laquo;</a></li>
+		<li><a href="{{request.path}}?page={{ page|add:1}}&wd={{request.GET.wd}}&types={{request.GET.types}}&onsale={{request.GET.onsale}}">&raquo;</a></li>
+	</ul>			
+</div>

@@ -1,0 +1,97 @@
+
+
+{% extends "app/layout.html" %}
+
+{% block content %}
+
+
+
+
+
+
+
+
+
+
+<div class="col-lg-12 col-md-12 col-sm-12"style="margin-top:50px;">
+	<div class="col-lg-2 col-sm-2 col-md-2">
+		
+	         <img src="{{sku.0.num_iid.pic_url}}"style="width:90px;height:90px;" 
+	         title="主图" jqimg="{{sku.0.num_iid.pic_url}}">
+	  
+	</div>
+	<div class="col-lg-8 col-md-8 col-sm-8">
+		<div class="title">
+			<p>{{sku.0.num_iid.title}}</p>					
+		</div>
+		<div class="outer">
+			<p >整体外部编码:{{sku.0.num_iid.od_outer_id}}</p>	
+			{%if sku.0.num_iid.onsale%}	
+			<a href="https://detail.tmall.com/item.htm?id={{sku.0.num_iid.num_iid}}"target="_blank"title=""><p class="col-lg-6">出售中
+			<span class="glyphicon glyphicon-ok" style="color:lime;"></span></p>	</a>
+			{%else%}
+			<p class="col-lg-6">仓库
+			<span class="glyphicon glyphicon-remove"  style="color:red;"></span></p>
+			{%endif%}	
+			{%if sku.0.num_iid.sync%}	
+			<a href="{%url 'detail_sku'%}?id={{request.GET.id}}"target="_blank"class="text-right  col-lg-6" title=""><p >已录入
+				<span class="glyphicon glyphicon-ok" style="color:lime;"></span></p></a>	
+			{%else%}
+				<p class="text-right  col-lg-6">未录入
+				<span class="glyphicon glyphicon-remove"  style="color:red;"></span></p>
+			{%endif%}	
+		</div>
+		</div>
+</div>
+
+
+
+<table class="table col-lg-12 col-md-12 col-sm-12 table-condensed table-bordered" style="margin-top:30px;">
+	
+	<thead>
+		<tr>
+			<th class="text-center">SKU图片 
+		</th>
+			<th  class="text-center">新短编码</th>
+			<th class="text-center">新长编码</th>
+			<th  class="text-center">衣服类型</th>			
+			<th  class="text-center">画师图片编码</th>
+			<th class="text-center">旧编码</th>
+		
+		</tr>
+	</thead>
+	<tbody>
+		{%for x in sku%}
+			<tr>
+				<td><img src="{{x.pic_url}}" alt=""style="width:50px"></td>
+				<td>{{x.guid}}</td>
+				<td>{{x.long_guid}}</td>
+
+
+				<td>{%for skuinner in x.skuinner.all%}
+						{{skuinner.clothe_sku}}<br>
+					{%endfor%}</td>
+
+				<td>{%for skuinner in x.skuinner.all%}
+						{%for e in skuinner.pic.all%}
+						{{e}}<br>
+						{%endfor%}
+					{%endfor%}
+				</td>	
+				<td>{{x.od_outer_id}}</td>			
+			</tr>
+		{%endfor%}
+	</tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+{%endblock%}

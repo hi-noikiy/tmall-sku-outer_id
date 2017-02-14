@@ -1,0 +1,117 @@
+{% extends "app/layout.html" %}
+
+{% block content %}
+
+
+
+
+
+
+
+
+
+
+
+
+ {% include 'app/head2.html' %}
+
+
+
+
+
+
+
+<div class="container col-lg-12" style="margin-top: 50px">
+	<div class="row" id="commodity">
+	
+
+	{%if comm%}	
+		<div class="panel panel-default col-lg-12 col-sm-12 col-md-12"style="margin:0px;">
+			<div class="panel-heading">
+				<h3 class="panel-title">
+				筛选
+				</h3>
+			</div>
+			<div class="panel-body">
+			
+
+			</div>
+		</div>
+		{%include "app/pager.html"%}
+
+		{%include "app/commlist.html"%}
+
+		{%include "app/pager.html"%}
+	{%else%}
+	<div class="text-center" id="download">
+		<p class="lead">还没有下载任何商品</p>
+	<button type="button"  class="btn btn-default btn-lg sync">同步商品列表</button>
+	</div>
+	
+
+	{%endif%}
+
+
+
+		
+	</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{% endblock %}
+
+
+
+
+{% block scripts %}
+<script type="text/javascript">	
+$(function(){
+
+
+	$(".sync").click(function(){	
+	if(confirm("这里是更新全部商品列表,可能会消耗大量时间,\n 请问要继续吗?")){
+		$(this).attr({"disabled":"disabled"}).text("正在下载商品");
+
+		$.ajax({
+			url:"{%url 'sync'%}",
+			type:"get",
+			dataType:"html",
+			success:function(req){
+		 $(this).removeAttr("disabled").text("商品更新成功,请 刷新本页");
+		 history.go(0);
+				$("#commodity").append($(req));
+				$("#download").remove();
+				
+			},error:function(){
+				history.go(0);			}
+		});
+
+		};
+	});
+$(".commodity-all").addClass("active");
+if ($(".data-{{request.GET.types}}").length>0) {
+	$(".data-{{request.GET.types}}").removeClass("btn-default").addClass("btn-primary")
+}else{
+	$(".data-2").removeClass("btn-default").addClass("btn-primary")
+}
+
+
+
+
+})
+</script>
+
+{% endblock %}

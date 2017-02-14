@@ -1,0 +1,1291 @@
+Searching 441 files for "app" (case sensitive, whole word)
+
+F:\zema-recognition\zema-recognition\app\top\api\rest\SubuserDepartmentAddRequest.py:
+    2  Created by auto_sdk on 2016.03.05
+    3  '''
+    4: from   app.top.api.base import RestApi
+    5  class SubuserDepartmentAddRequest(RestApi):
+    6  	def __init__(self,domain='gw.api.taobao.com',port=80):
+
+F:\zema-recognition\zema-recognition\app\top\api\rest\SubuserDepartmentDeleteRequest.py:
+    2  Created by auto_sdk on 2016.04.13
+    3  '''
+    4: from   app.top.api.base import RestApi
+    5  class SubuserDepartmentDeleteRequest(RestApi):
+    6  	def __init__(self,domain='gw.api.taobao.com',port=80):
+
+F:\zema-recognition\zema-recognition\app\top\api\rest\SubuserDepartmentsGetRequest.py:
+    2  Created by auto_sdk on 2016.03.17
+    3  '''
+    4: from   app.top.api.base import RestApi
+    5  class SubuserDepartmentsGetRequest(RestApi):
+    6  	def __init__(self,domain='gw.api.taobao.com',port=80):
+
+F:\zema-recognition\zema-recognition\app\top\api\rest\SubuserDepartmentUpdateRequest.py:
+    2  Created by auto_sdk on 2016.03.05
+    3  '''
+    4: from   app.top.api.base import RestApi
+    5  class SubuserDepartmentUpdateRequest(RestApi):
+    6  	def __init__(self,domain='gw.api.taobao.com',port=80):
+
+F:\zema-recognition\zema-recognition\app\top\api\rest\SubuserDutyAddRequest.py:
+    2  Created by auto_sdk on 2016.03.05
+    3  '''
+    4: from   app.top.api.base import RestApi
+    5  class SubuserDutyAddRequest(RestApi):
+    6  	def __init__(self,domain='gw.api.taobao.com',port=80):
+
+F:\zema-recognition\zema-recognition\app\top\api\rest\SubuserDutyDeleteRequest.py:
+    2  Created by auto_sdk on 2016.03.05
+    3  '''
+    4: from   app.top.api.base import RestApi
+    5  class SubuserDutyDeleteRequest(RestApi):
+    6  	def __init__(self,domain='gw.api.taobao.com',port=80):
+
+F:\zema-recognition\zema-recognition\app\top\api\rest\SubuserDutysGetRequest.py:
+    2  Created by auto_sdk on 2016.04.13
+    3  '''
+    4: from   app.top.api.base import RestApi
+    5  class SubuserDutysGetRequest(RestApi):
+    6  	def __init__(self,domain='gw.api.taobao.com',port=80):
+
+F:\zema-recognition\zema-recognition\app\top\api\rest\SubuserDutyUpdateRequest.py:
+    2  Created by auto_sdk on 2016.03.05
+    3  '''
+    4: from   app.top.api.base import RestApi
+    5  class SubuserDutyUpdateRequest(RestApi):
+    6  	def __init__(self,domain='gw.api.taobao.com',port=80):
+
+F:\zema-recognition\zema-recognition\app\top\api\rest\SubuserEmployeeAddRequest.py:
+    2  Created by auto_sdk on 2016.04.14
+    3  '''
+    4: from   app.top.api.base import RestApi
+    5  class SubuserEmployeeAddRequest(RestApi):
+    6  	def __init__(self,domain='gw.api.taobao.com',port=80):
+
+F:\zema-recognition\zema-recognition\app\top\api\rest\SubuserEmployeeUpdateRequest.py:
+    2  Created by auto_sdk on 2016.04.12
+    3  '''
+    4: from   app.top.api.base import RestApi
+    5  class SubuserEmployeeUpdateRequest(RestApi):
+    6  	def __init__(self,domain='gw.api.taobao.com',port=80):
+
+F:\zema-recognition\zema-recognition\app\top\api\rest\SubuserFullinfoGetRequest.py:
+    2  Created by auto_sdk on 2016.04.13
+    3  '''
+    4: from   app.top.api.base import RestApi
+    5  class SubuserFullinfoGetRequest(RestApi):
+    6  	def __init__(self,domain='gw.api.taobao.com',port=80):
+
+F:\zema-recognition\zema-recognition\app\top\api\rest\SubuserInfoUpdateRequest.py:
+    2  Created by auto_sdk on 2016.04.11
+    3  '''
+    4: from   app.top.api.base import RestApi
+    5  class SubuserInfoUpdateRequest(RestApi):
+    6  	def __init__(self,domain='gw.api.taobao.com',port=80):
+
+F:\zema-recognition\zema-recognition\app\top\api\rest\SubusersGetRequest.py:
+    2  Created by auto_sdk on 2013.01.22
+    3  '''
+    4: from   app.top.api.base import RestApi
+    5  class SubusersGetRequest(RestApi):
+    6  	def __init__(self,domain='gw.api.taobao.com',port=80):
+
+F:\zema-recognition\zema-recognition\app\top\api\rest\TicketItemAddRequest.py:
+    2  Created by auto_sdk on 2016.04.14
+    3  '''
+    4: from   app.top.api.base import RestApi
+    5  class TicketItemAddRequest(RestApi):
+    6  	def __init__(self,domain='gw.api.taobao.com',port=80):
+
+F:\zema-recognition\zema-recognition\app\top\api\rest\TicketItemGetRequest.py:
+    2  Created by auto_sdk on 2016.04.15
+    3  '''
+    4: from   app.top.api.base import RestApi
+    5  class TicketItemGetRequest(RestApi):
+    6  	def __init__(self,domain='gw.api.taobao.com',port=80):
+
+F:\zema-recognition\zema-recognition\app\top\api\rest\TicketItemsGetRequest.py:
+    2  Created by auto_sdk on 2016.03.07
+    3  '''
+    4: from   app.top.api.base import RestApi
+    5  class TicketItemsGetRequest(RestApi):
+    6  	def __init__(self,domain='gw.api.taobao.com',port=80):
+
+F:\zema-recognition\zema-recognition\app\top\api\rest\TicketItemUpdateRequest.py:
+    2  Created by auto_sdk on 2016.04.11
+    3  '''
+    4: from   app.top.api.base import RestApi
+    5  class TicketItemUpdateRequest(RestApi):
+    6  	def __init__(self,domain='gw.api.taobao.com',port=80):
+
+F:\zema-recognition\zema-recognition\app\top\api\rest\TimeGetRequest.py:
+    2  Created by auto_sdk on 2016.03.28
+    3  '''
+    4: from   app.top.api.base import RestApi
+    5  class TimeGetRequest(RestApi):
+    6  	def __init__(self,domain='gw.api.taobao.com',port=80):
+
+F:\zema-recognition\zema-recognition\app\top\api\rest\TmallBrandcatControlGetRequest.py:
+    2  Created by auto_sdk on 2016.03.17
+    3  '''
+    4: from   app.top.api.base import RestApi
+    5  class TmallBrandcatControlGetRequest(RestApi):
+    6  	def __init__(self,domain='gw.api.taobao.com',port=80):
+
+F:\zema-recognition\zema-recognition\app\top\api\rest\TmallBrandcatMetadataGetRequest.py:
+    2  Created by auto_sdk on 2016.04.14
+    3  '''
+    4: from   app.top.api.base import RestApi
+    5  class TmallBrandcatMetadataGetRequest(RestApi):
+    6  	def __init__(self,domain='gw.api.taobao.com',port=80):
+
+F:\zema-recognition\zema-recognition\app\top\api\rest\TmallBrandcatPropinputGetRequest.py:
+    2  Created by auto_sdk on 2016.03.06
+    3  '''
+    4: from   app.top.api.base import RestApi
+    5  class TmallBrandcatPropinputGetRequest(RestApi):
+    6  	def __init__(self,domain='gw.api.taobao.com',port=80):
+
+F:\zema-recognition\zema-recognition\app\top\api\rest\TmallBrandcatSalesproGetRequest.py:
+    2  Created by auto_sdk on 2016.04.13
+    3  '''
+    4: from   app.top.api.base import RestApi
+    5  class TmallBrandcatSalesproGetRequest(RestApi):
+    6  	def __init__(self,domain='gw.api.taobao.com',port=80):
+
+F:\zema-recognition\zema-recognition\app\top\api\rest\TmallBrandcatSuiteconfGetRequest.py:
+    2  Created by auto_sdk on 2016.03.16
+    3  '''
+    4: from   app.top.api.base import RestApi
+    5  class TmallBrandcatSuiteconfGetRequest(RestApi):
+    6  	def __init__(self,domain='gw.api.taobao.com',port=80):
+
+F:\zema-recognition\zema-recognition\app\top\api\rest\TmallItemAddSchemaGetRequest.py:
+    2  Created by auto_sdk on 2015.09.11
+    3  '''
+    4: from   app.top.api.base import RestApi
+    5  class TmallItemAddSchemaGetRequest(RestApi):
+    6  	def __init__(self,domain='gw.api.taobao.com',port=80):
+
+F:\zema-recognition\zema-recognition\app\top\api\rest\TmallItemCombineGetRequest.py:
+    2  Created by auto_sdk on 2016.08.05
+    3  '''
+    4: from   app.top.api.base import RestApi
+    5  class TmallItemCombineGetRequest(RestApi):
+    6  	def __init__(self,domain='gw.api.taobao.com',port=80):
+
+F:\zema-recognition\zema-recognition\app\top\api\rest\TmallItemDapeiTemplateAddRequest.py:
+    2  Created by auto_sdk on 2016.07.06
+    3  '''
+    4: from   app.top.api.base import RestApi
+    5  class TmallItemDapeiTemplateAddRequest(RestApi):
+    6  	def __init__(self,domain='gw.api.taobao.com',port=80):
+
+F:\zema-recognition\zema-recognition\app\top\api\rest\TmallItemDapeiTemplateDeleteRequest.py:
+    2  Created by auto_sdk on 2016.07.06
+    3  '''
+    4: from   app.top.api.base import RestApi
+    5  class TmallItemDapeiTemplateDeleteRequest(RestApi):
+    6  	def __init__(self,domain='gw.api.taobao.com',port=80):
+
+F:\zema-recognition\zema-recognition\app\top\api\rest\TmallItemDapeiTemplateGetRequest.py:
+    2  Created by auto_sdk on 2016.07.06
+    3  '''
+    4: from   app.top.api.base import RestApi
+    5  class TmallItemDapeiTemplateGetRequest(RestApi):
+    6  	def __init__(self,domain='gw.api.taobao.com',port=80):
+
+F:\zema-recognition\zema-recognition\app\top\api\rest\TmallItemDapeiTemplateUpdateRequest.py:
+    2  Created by auto_sdk on 2016.07.06
+    3  '''
+    4: from   app.top.api.base import RestApi
+    5  class TmallItemDapeiTemplateUpdateRequest(RestApi):
+    6  	def __init__(self,domain='gw.api.taobao.com',port=80):
+
+F:\zema-recognition\zema-recognition\app\top\api\rest\TmallItemDescModulesGetRequest.py:
+    2  Created by auto_sdk on 2013.07.09
+    3  '''
+    4: from   app.top.api.base import RestApi
+    5  class TmallItemDescModulesGetRequest(RestApi):
+    6  	def __init__(self,domain='gw.api.taobao.com',port=80):
+
+F:\zema-recognition\zema-recognition\app\top\api\rest\TmallItemIncrementUpdateSchemaGetRequest.py:
+    2  Created by auto_sdk on 2015.08.03
+    3  '''
+    4: from   app.top.api.base import RestApi
+    5  class TmallItemIncrementUpdateSchemaGetRequest(RestApi):
+    6  	def __init__(self,domain='gw.api.taobao.com',port=80):
+
+F:\zema-recognition\zema-recognition\app\top\api\rest\TmallItemOuteridUpdateRequest.py:
+    2  Created by auto_sdk on 2015.06.09
+    3  '''
+    4: from   app.top.api.base import RestApi
+    5  class TmallItemOuteridUpdateRequest(RestApi):
+    6  	def __init__(self,domain='gw.api.taobao.com',port=80):
+
+F:\zema-recognition\zema-recognition\app\top\api\rest\TmallItemPriceUpdateRequest.py:
+    2  Created by auto_sdk on 2015.10.15
+    3  '''
+    4: from   app.top.api.base import RestApi
+    5  class TmallItemPriceUpdateRequest(RestApi):
+    6  	def __init__(self,domain='gw.api.taobao.com',port=80):
+
+F:\zema-recognition\zema-recognition\app\top\api\rest\TmallItemQuantityUpdateRequest.py:
+    2  Created by auto_sdk on 2016.02.02
+    3  '''
+    4: from   app.top.api.base import RestApi
+    5  class TmallItemQuantityUpdateRequest(RestApi):
+    6  	def __init__(self,domain='gw.api.taobao.com',port=80):
+
+F:\zema-recognition\zema-recognition\app\top\api\rest\TmallItemSchemaAddRequest.py:
+    2  Created by auto_sdk on 2015.12.17
+    3  '''
+    4: from   app.top.api.base import RestApi
+    5  class TmallItemSchemaAddRequest(RestApi):
+    6  	def __init__(self,domain='gw.api.taobao.com',port=80):
+
+F:\zema-recognition\zema-recognition\app\top\api\rest\TmallItemSchemaIncrementUpdateRequest.py:
+    2  Created by auto_sdk on 2016.01.13
+    3  '''
+    4: from   app.top.api.base import RestApi
+    5  class TmallItemSchemaIncrementUpdateRequest(RestApi):
+    6  	def __init__(self,domain='gw.api.taobao.com',port=80):
+
+F:\zema-recognition\zema-recognition\app\top\api\rest\TmallItemSchemaUpdateRequest.py:
+    2  Created by auto_sdk on 2015.12.17
+    3  '''
+    4: from   app.top.api.base import RestApi
+    5  class TmallItemSchemaUpdateRequest(RestApi):
+    6  	def __init__(self,domain='gw.api.taobao.com',port=80):
+
+F:\zema-recognition\zema-recognition\app\top\api\rest\TmallItemShiptimeUpdateRequest.py:
+    2  Created by auto_sdk on 2015.09.11
+    3  '''
+    4: from   app.top.api.base import RestApi
+    5  class TmallItemShiptimeUpdateRequest(RestApi):
+    6  	def __init__(self,domain='gw.api.taobao.com',port=80):
+
+F:\zema-recognition\zema-recognition\app\top\api\rest\TmallItemSizemappingTemplateCreateRequest.py:
+    2  Created by auto_sdk on 2016.02.23
+    3  '''
+    4: from   app.top.api.base import RestApi
+    5  class TmallItemSizemappingTemplateCreateRequest(RestApi):
+    6  	def __init__(self,domain='gw.api.taobao.com',port=80):
+
+F:\zema-recognition\zema-recognition\app\top\api\rest\TmallItemSizemappingTemplateDeleteRequest.py:
+    2  Created by auto_sdk on 2016.02.23
+    3  '''
+    4: from   app.top.api.base import RestApi
+    5  class TmallItemSizemappingTemplateDeleteRequest(RestApi):
+    6  	def __init__(self,domain='gw.api.taobao.com',port=80):
+
+F:\zema-recognition\zema-recognition\app\top\api\rest\TmallItemSizemappingTemplateGetRequest.py:
+    2  Created by auto_sdk on 2016.02.23
+    3  '''
+    4: from   app.top.api.base import RestApi
+    5  class TmallItemSizemappingTemplateGetRequest(RestApi):
+    6  	def __init__(self,domain='gw.api.taobao.com',port=80):
+
+F:\zema-recognition\zema-recognition\app\top\api\rest\TmallItemSizemappingTemplatesListRequest.py:
+    2  Created by auto_sdk on 2016.02.23
+    3  '''
+    4: from   app.top.api.base import RestApi
+    5  class TmallItemSizemappingTemplatesListRequest(RestApi):
+    6  	def __init__(self,domain='gw.api.taobao.com',port=80):
+
+F:\zema-recognition\zema-recognition\app\top\api\rest\TmallItemSizemappingTemplateUpdateRequest.py:
+    2  Created by auto_sdk on 2016.02.23
+    3  '''
+    4: from   app.top.api.base import RestApi
+    5  class TmallItemSizemappingTemplateUpdateRequest(RestApi):
+    6  	def __init__(self,domain='gw.api.taobao.com',port=80):
+
+F:\zema-recognition\zema-recognition\app\top\api\rest\TmallItemUpdateSchemaGetRequest.py:
+    2  Created by auto_sdk on 2015.09.11
+    3  '''
+    4: from   app.top.api.base import RestApi
+    5  class TmallItemUpdateSchemaGetRequest(RestApi):
+    6  	def __init__(self,domain='gw.api.taobao.com',port=80):
+
+F:\zema-recognition\zema-recognition\app\top\api\rest\TmallMarketingTmallcouponCouponApplyRequest.py:
+    2  Created by auto_sdk on 2015.11.30
+    3  '''
+    4: from   app.top.api.base import RestApi
+    5  class TmallMarketingTmallcouponCouponApplyRequest(RestApi):
+    6  	def __init__(self,domain='gw.api.taobao.com',port=80):
+
+F:\zema-recognition\zema-recognition\app\top\api\rest\TmallProductAddSchemaGetRequest.py:
+    2  Created by auto_sdk on 2016.04.13
+    3  '''
+    4: from   app.top.api.base import RestApi
+    5  class TmallProductAddSchemaGetRequest(RestApi):
+    6  	def __init__(self,domain='gw.api.taobao.com',port=80):
+
+F:\zema-recognition\zema-recognition\app\top\api\rest\TmallProductBooksAddRequest.py:
+    2  Created by auto_sdk on 2016.03.06
+    3  '''
+    4: from   app.top.api.base import RestApi
+    5  class TmallProductBooksAddRequest(RestApi):
+    6  	def __init__(self,domain='gw.api.taobao.com',port=80):
+
+F:\zema-recognition\zema-recognition\app\top\api\rest\TmallProductMatchSchemaGetRequest.py:
+    2  Created by auto_sdk on 2016.04.13
+    3  '''
+    4: from   app.top.api.base import RestApi
+    5  class TmallProductMatchSchemaGetRequest(RestApi):
+    6  	def __init__(self,domain='gw.api.taobao.com',port=80):
+
+F:\zema-recognition\zema-recognition\app\top\api\rest\TmallProductSchemaAddRequest.py:
+    2  Created by auto_sdk on 2015.10.15
+    3  '''
+    4: from   app.top.api.base import RestApi
+    5  class TmallProductSchemaAddRequest(RestApi):
+    6  	def __init__(self,domain='gw.api.taobao.com',port=80):
+
+F:\zema-recognition\zema-recognition\app\top\api\rest\TmallProductSchemaGetRequest.py:
+    2  Created by auto_sdk on 2016.02.29
+    3  '''
+    4: from   app.top.api.base import RestApi
+    5  class TmallProductSchemaGetRequest(RestApi):
+    6  	def __init__(self,domain='gw.api.taobao.com',port=80):
+
+F:\zema-recognition\zema-recognition\app\top\api\rest\TmallProductSchemaMatchRequest.py:
+    2  Created by auto_sdk on 2016.04.13
+    3  '''
+    4: from   app.top.api.base import RestApi
+    5  class TmallProductSchemaMatchRequest(RestApi):
+    6  	def __init__(self,domain='gw.api.taobao.com',port=80):
+
+F:\zema-recognition\zema-recognition\app\top\api\rest\TmallProductSchemaUpdateRequest.py:
+    2  Created by auto_sdk on 2015.10.15
+    3  '''
+    4: from   app.top.api.base import RestApi
+    5  class TmallProductSchemaUpdateRequest(RestApi):
+    6  	def __init__(self,domain='gw.api.taobao.com',port=80):
+
+F:\zema-recognition\zema-recognition\app\top\api\rest\TmallProductSpecAddRequest.py:
+    2  Created by auto_sdk on 2016.04.14
+    3  '''
+    4: from   app.top.api.base import RestApi
+    5  class TmallProductSpecAddRequest(RestApi):
+    6  	def __init__(self,domain='gw.api.taobao.com',port=80):
+
+F:\zema-recognition\zema-recognition\app\top\api\rest\TmallProductSpecGetRequest.py:
+    2  Created by auto_sdk on 2016.03.08
+    3  '''
+    4: from   app.top.api.base import RestApi
+    5  class TmallProductSpecGetRequest(RestApi):
+    6  	def __init__(self,domain='gw.api.taobao.com',port=80):
+
+F:\zema-recognition\zema-recognition\app\top\api\rest\TmallProductSpecPicUploadRequest.py:
+    2  Created by auto_sdk on 2016.04.12
+    3  '''
+    4: from   app.top.api.base import RestApi
+    5  class TmallProductSpecPicUploadRequest(RestApi):
+    6  	def __init__(self,domain='gw.api.taobao.com',port=80):
+
+F:\zema-recognition\zema-recognition\app\top\api\rest\TmallProductSpecsGetRequest.py:
+    2  Created by auto_sdk on 2016.04.13
+    3  '''
+    4: from   app.top.api.base import RestApi
+    5  class TmallProductSpecsGetRequest(RestApi):
+    6  	def __init__(self,domain='gw.api.taobao.com',port=80):
+
+F:\zema-recognition\zema-recognition\app\top\api\rest\TmallProductSpecsTicketGetRequest.py:
+    2  Created by auto_sdk on 2016.04.13
+    3  '''
+    4: from   app.top.api.base import RestApi
+    5  class TmallProductSpecsTicketGetRequest(RestApi):
+    6  	def __init__(self,domain='gw.api.taobao.com',port=80):
+
+F:\zema-recognition\zema-recognition\app\top\api\rest\TmallProductSuitespecsGetRequest.py:
+    2  Created by auto_sdk on 2016.04.13
+    3  '''
+    4: from   app.top.api.base import RestApi
+    5  class TmallProductSuitespecsGetRequest(RestApi):
+    6  	def __init__(self,domain='gw.api.taobao.com',port=80):
+
+F:\zema-recognition\zema-recognition\app\top\api\rest\TmallProductTemplateGetRequest.py:
+    2  Created by auto_sdk on 2016.04.13
+    3  '''
+    4: from   app.top.api.base import RestApi
+    5  class TmallProductTemplateGetRequest(RestApi):
+    6  	def __init__(self,domain='gw.api.taobao.com',port=80):
+
+F:\zema-recognition\zema-recognition\app\top\api\rest\TmallProductUpdateSchemaGetRequest.py:
+    2  Created by auto_sdk on 2016.02.29
+    3  '''
+    4: from   app.top.api.base import RestApi
+    5  class TmallProductUpdateSchemaGetRequest(RestApi):
+    6  	def __init__(self,domain='gw.api.taobao.com',port=80):
+
+F:\zema-recognition\zema-recognition\app\top\api\rest\TopatsResultGetRequest.py:
+    2  Created by auto_sdk on 2016.07.20
+    3  '''
+    4: from   app.top.api.base import RestApi
+    5  class TopatsResultGetRequest(RestApi):
+    6  	def __init__(self,domain='gw.api.taobao.com',port=80):
+
+F:\zema-recognition\zema-recognition\app\top\api\rest\TopatsTaskDeleteRequest.py:
+    2  Created by auto_sdk on 2014.03.27
+    3  '''
+    4: from   app.top.api.base import RestApi
+    5  class TopatsTaskDeleteRequest(RestApi):
+    6  	def __init__(self,domain='gw.api.taobao.com',port=80):
+
+F:\zema-recognition\zema-recognition\app\top\api\rest\TopAuthTokenCreateRequest.py:
+    2  Created by auto_sdk on 2016.04.15
+    3  '''
+    4: from   app.top.api.base import RestApi
+    5  class TopAuthTokenCreateRequest(RestApi):
+    6  	def __init__(self,domain='gw.api.taobao.com',port=80):
+
+F:\zema-recognition\zema-recognition\app\top\api\rest\TopAuthTokenRefreshRequest.py:
+    2  Created by auto_sdk on 2015.08.20
+    3  '''
+    4: from   app.top.api.base import RestApi
+    5  class TopAuthTokenRefreshRequest(RestApi):
+    6  	def __init__(self,domain='gw.api.taobao.com',port=80):
+
+F:\zema-recognition\zema-recognition\app\top\api\rest\TopIpoutGetRequest.py:
+    2  Created by auto_sdk on 2015.09.07
+    3  '''
+    4: from   app.top.api.base import RestApi
+    5  class TopIpoutGetRequest(RestApi):
+    6  	def __init__(self,domain='gw.api.taobao.com',port=80):
+
+F:\zema-recognition\zema-recognition\app\top\api\rest\TopSdkFeedbackUploadRequest.py:
+    2  Created by auto_sdk on 2016.08.19
+    3  '''
+    4: from   app.top.api.base import RestApi
+    5  class TopSdkFeedbackUploadRequest(RestApi):
+    6  	def __init__(self,domain='gw.api.taobao.com',port=80):
+
+F:\zema-recognition\zema-recognition\app\top\api\rest\TopSecretGetRequest.py:
+    2  Created by auto_sdk on 2016.08.19
+    3  '''
+    4: from   app.top.api.base import RestApi
+    5  class TopSecretGetRequest(RestApi):
+    6  	def __init__(self,domain='gw.api.taobao.com',port=80):
+
+F:\zema-recognition\zema-recognition\app\top\api\rest\TopSecretRegisterRequest.py:
+    2  Created by auto_sdk on 2016.08.16
+    3  '''
+    4: from   app.top.api.base import RestApi
+    5  class TopSecretRegisterRequest(RestApi):
+    6  	def __init__(self,domain='gw.api.taobao.com',port=80):
+
+F:\zema-recognition\zema-recognition\app\top\api\rest\TradeAmountGetRequest.py:
+    2  Created by auto_sdk on 2015.04.24
+    3  '''
+    4: from   app.top.api.base import RestApi
+    5  class TradeAmountGetRequest(RestApi):
+    6  	def __init__(self,domain='gw.api.taobao.com',port=80):
+
+F:\zema-recognition\zema-recognition\app\top\api\rest\TradeCloseRequest.py:
+    2  Created by auto_sdk on 2015.04.14
+    3  '''
+    4: from   app.top.api.base import RestApi
+    5  class TradeCloseRequest(RestApi):
+    6  	def __init__(self,domain='gw.api.taobao.com',port=80):
+
+F:\zema-recognition\zema-recognition\app\top\api\rest\TradeConfirmfeeGetRequest.py:
+    2  Created by auto_sdk on 2015.04.14
+    3  '''
+    4: from   app.top.api.base import RestApi
+    5  class TradeConfirmfeeGetRequest(RestApi):
+    6  	def __init__(self,domain='gw.api.taobao.com',port=80):
+
+F:\zema-recognition\zema-recognition\app\top\api\rest\TradeDrugConfirmorderRequest.py:
+    2  Created by auto_sdk on 2016.03.21
+    3  '''
+    4: from   app.top.api.base import RestApi
+    5  class TradeDrugConfirmorderRequest(RestApi):
+    6  	def __init__(self,domain='gw.api.taobao.com',port=80):
+
+F:\zema-recognition\zema-recognition\app\top\api\rest\TradeDrugGetRequest.py:
+    2  Created by auto_sdk on 2016.03.21
+    3  '''
+    4: from   app.top.api.base import RestApi
+    5  class TradeDrugGetRequest(RestApi):
+    6  	def __init__(self,domain='gw.api.taobao.com',port=80):
+
+F:\zema-recognition\zema-recognition\app\top\api\rest\TradeDrugOrdersGetRequest.py:
+    2  Created by auto_sdk on 2016.08.25
+    3  '''
+    4: from   app.top.api.base import RestApi
+    5  class TradeDrugOrdersGetRequest(RestApi):
+    6  	def __init__(self,domain='gw.api.taobao.com',port=80):
+
+F:\zema-recognition\zema-recognition\app\top\api\rest\TradeFullinfoGetRequest.py:
+    2  Created by auto_sdk on 2016.08.26
+    3  '''
+    4: from   app.top.api.base import RestApi
+    5  class TradeFullinfoGetRequest(RestApi):
+    6  	def __init__(self,domain='gw.api.taobao.com',port=80):
+
+F:\zema-recognition\zema-recognition\app\top\api\rest\TradeGetRequest.py:
+    2  Created by auto_sdk on 2016.04.07
+    3  '''
+    4: from   app.top.api.base import RestApi
+    5  class TradeGetRequest(RestApi):
+    6  	def __init__(self,domain='gw.api.taobao.com',port=80):
+
+F:\zema-recognition\zema-recognition\app\top\api\rest\TradeMemoAddRequest.py:
+    2  Created by auto_sdk on 2015.07.02
+    3  '''
+    4: from   app.top.api.base import RestApi
+    5  class TradeMemoAddRequest(RestApi):
+    6  	def __init__(self,domain='gw.api.taobao.com',port=80):
+
+F:\zema-recognition\zema-recognition\app\top\api\rest\TradeMemoUpdateRequest.py:
+    2  Created by auto_sdk on 2015.07.02
+    3  '''
+    4: from   app.top.api.base import RestApi
+    5  class TradeMemoUpdateRequest(RestApi):
+    6  	def __init__(self,domain='gw.api.taobao.com',port=80):
+
+F:\zema-recognition\zema-recognition\app\top\api\rest\TradeOrderskuUpdateRequest.py:
+    2  Created by auto_sdk on 2015.04.14
+    3  '''
+    4: from   app.top.api.base import RestApi
+    5  class TradeOrderskuUpdateRequest(RestApi):
+    6  	def __init__(self,domain='gw.api.taobao.com',port=80):
+
+F:\zema-recognition\zema-recognition\app\top\api\rest\TradePostageUpdateRequest.py:
+    2  Created by auto_sdk on 2015.11.10
+    3  '''
+    4: from   app.top.api.base import RestApi
+    5  class TradePostageUpdateRequest(RestApi):
+    6  	def __init__(self,domain='gw.api.taobao.com',port=80):
+
+F:\zema-recognition\zema-recognition\app\top\api\rest\TraderateAddRequest.py:
+    2  Created by auto_sdk on 2016.04.13
+    3  '''
+    4: from   app.top.api.base import RestApi
+    5  class TraderateAddRequest(RestApi):
+    6  	def __init__(self,domain='gw.api.taobao.com',port=80):
+
+F:\zema-recognition\zema-recognition\app\top\api\rest\TraderateExplainAddRequest.py:
+    2  Created by auto_sdk on 2016.04.14
+    3  '''
+    4: from   app.top.api.base import RestApi
+    5  class TraderateExplainAddRequest(RestApi):
+    6  	def __init__(self,domain='gw.api.taobao.com',port=80):
+
+F:\zema-recognition\zema-recognition\app\top\api\rest\TraderateListAddRequest.py:
+    2  Created by auto_sdk on 2016.04.13
+    3  '''
+    4: from   app.top.api.base import RestApi
+    5  class TraderateListAddRequest(RestApi):
+    6  	def __init__(self,domain='gw.api.taobao.com',port=80):
+
+F:\zema-recognition\zema-recognition\app\top\api\rest\TraderatesGetRequest.py:
+    2  Created by auto_sdk on 2016.03.10
+    3  '''
+    4: from   app.top.api.base import RestApi
+    5  class TraderatesGetRequest(RestApi):
+    6  	def __init__(self,domain='gw.api.taobao.com',port=80):
+
+F:\zema-recognition\zema-recognition\app\top\api\rest\TradeReceivetimeDelayRequest.py:
+    2  Created by auto_sdk on 2015.04.14
+    3  '''
+    4: from   app.top.api.base import RestApi
+    5  class TradeReceivetimeDelayRequest(RestApi):
+    6  	def __init__(self,domain='gw.api.taobao.com',port=80):
+
+F:\zema-recognition\zema-recognition\app\top\api\rest\TradeShippingaddressUpdateRequest.py:
+    2  Created by auto_sdk on 2016.03.23
+    3  '''
+    4: from   app.top.api.base import RestApi
+    5  class TradeShippingaddressUpdateRequest(RestApi):
+    6  	def __init__(self,domain='gw.api.taobao.com',port=80):
+
+F:\zema-recognition\zema-recognition\app\top\api\rest\TradeSnapshotGetRequest.py:
+    2  Created by auto_sdk on 2016.03.22
+    3  '''
+    4: from   app.top.api.base import RestApi
+    5  class TradeSnapshotGetRequest(RestApi):
+    6  	def __init__(self,domain='gw.api.taobao.com',port=80):
+
+F:\zema-recognition\zema-recognition\app\top\api\rest\TradesSoldGetRequest.py:
+    2  Created by auto_sdk on 2016.04.19
+    3  '''
+    4: from   app.top.api.base import RestApi
+    5  class TradesSoldGetRequest(RestApi):
+    6  	def __init__(self,domain='gw.api.taobao.com',port=80):
+
+F:\zema-recognition\zema-recognition\app\top\api\rest\TradesSoldIncrementGetRequest.py:
+    2  Created by auto_sdk on 2016.04.07
+    3  '''
+    4: from   app.top.api.base import RestApi
+    5  class TradesSoldIncrementGetRequest(RestApi):
+    6  	def __init__(self,domain='gw.api.taobao.com',port=80):
+
+F:\zema-recognition\zema-recognition\app\top\api\rest\TradesSoldIncrementvGetRequest.py:
+    2  Created by auto_sdk on 2016.04.08
+    3  '''
+    4: from   app.top.api.base import RestApi
+    5  class TradesSoldIncrementvGetRequest(RestApi):
+    6  	def __init__(self,domain='gw.api.taobao.com',port=80):
+
+F:\zema-recognition\zema-recognition\app\top\api\rest\UmpPromotionGetRequest.py:
+    2  Created by auto_sdk on 2015.01.20
+    3  '''
+    4: from   app.top.api.base import RestApi
+    5  class UmpPromotionGetRequest(RestApi):
+    6  	def __init__(self,domain='gw.api.taobao.com',port=80):
+
+F:\zema-recognition\zema-recognition\app\top\api\rest\UserrecommendItemsGetRequest.py:
+    2  Created by auto_sdk on 2012.04.11
+    3  '''
+    4: from   app.top.api.base import RestApi
+    5  class UserrecommendItemsGetRequest(RestApi):
+    6  	def __init__(self,domain='gw.api.taobao.com',port=80):
+
+F:\zema-recognition\zema-recognition\app\top\api\rest\UserSellerGetRequest.py:
+    2  Created by auto_sdk on 2016.03.28
+    3  '''
+    4: from   app.top.api.base import RestApi
+    5  class UserSellerGetRequest(RestApi):
+    6  	def __init__(self,domain='gw.api.taobao.com',port=80):
+
+F:\zema-recognition\zema-recognition\app\top\api\rest\VasOrderSearchRequest.py:
+    2  Created by auto_sdk on 2015.06.18
+    3  '''
+    4: from   app.top.api.base import RestApi
+    5  class VasOrderSearchRequest(RestApi):
+    6  	def __init__(self,domain='gw.api.taobao.com',port=80):
+
+F:\zema-recognition\zema-recognition\app\top\api\rest\VasSubscribeGetRequest.py:
+    2  Created by auto_sdk on 2016.04.11
+    3  '''
+    4: from   app.top.api.base import RestApi
+    5  class VasSubscribeGetRequest(RestApi):
+    6  	def __init__(self,domain='gw.api.taobao.com',port=80):
+
+F:\zema-recognition\zema-recognition\app\top\api\rest\VasSubscSearchRequest.py:
+    2  Created by auto_sdk on 2016.06.14
+    3  '''
+    4: from   app.top.api.base import RestApi
+    5  class VasSubscSearchRequest(RestApi):
+    6  	def __init__(self,domain='gw.api.taobao.com',port=80):
+
+F:\zema-recognition\zema-recognition\app\top\api\rest\WlbImportsGeneralConsignRequest.py:
+    2  Created by auto_sdk on 2016.01.27
+    3  '''
+    4: from   app.top.api.base import RestApi
+    5  class WlbImportsGeneralConsignRequest(RestApi):
+    6  	def __init__(self,domain='gw.api.taobao.com',port=80):
+
+F:\zema-recognition\zema-recognition\app\top\api\rest\WlbImportsOrderCancelRequest.py:
+    2  Created by auto_sdk on 2016.01.27
+    3  '''
+    4: from   app.top.api.base import RestApi
+    5  class WlbImportsOrderCancelRequest(RestApi):
+    6  	def __init__(self,domain='gw.api.taobao.com',port=80):
+
+F:\zema-recognition\zema-recognition\app\top\api\rest\WlbImportsOrderGetRequest.py:
+    2  Created by auto_sdk on 2016.05.16
+    3  '''
+    4: from   app.top.api.base import RestApi
+    5  class WlbImportsOrderGetRequest(RestApi):
+    6  	def __init__(self,domain='gw.api.taobao.com',port=80):
+
+F:\zema-recognition\zema-recognition\app\top\api\rest\WlbImportsResourceGetRequest.py:
+    2  Created by auto_sdk on 2016.01.27
+    3  '''
+    4: from   app.top.api.base import RestApi
+    5  class WlbImportsResourceGetRequest(RestApi):
+    6  	def __init__(self,domain='gw.api.taobao.com',port=80):
+
+F:\zema-recognition\zema-recognition\app\top\api\rest\WlbImportsResourceTransferstoreGetRequest.py:
+    2  Created by auto_sdk on 2016.01.27
+    3  '''
+    4: from   app.top.api.base import RestApi
+    5  class WlbImportsResourceTransferstoreGetRequest(RestApi):
+    6  	def __init__(self,domain='gw.api.taobao.com',port=80):
+
+F:\zema-recognition\zema-recognition\app\top\api\rest\WlbImportsWaybillGetRequest.py:
+    2  Created by auto_sdk on 2016.01.27
+    3  '''
+    4: from   app.top.api.base import RestApi
+    5  class WlbImportsWaybillGetRequest(RestApi):
+    6  	def __init__(self,domain='gw.api.taobao.com',port=80):
+
+F:\zema-recognition\zema-recognition\app\top\api\rest\WlbInventoryDetailGetRequest.py:
+    2  Created by auto_sdk on 2016.01.25
+    3  '''
+    4: from   app.top.api.base import RestApi
+    5  class WlbInventoryDetailGetRequest(RestApi):
+    6  	def __init__(self,domain='gw.api.taobao.com',port=80):
+
+F:\zema-recognition\zema-recognition\app\top\api\rest\WlbInventorylogQueryRequest.py:
+    2  Created by auto_sdk on 2016.02.19
+    3  '''
+    4: from   app.top.api.base import RestApi
+    5  class WlbInventorylogQueryRequest(RestApi):
+    6  	def __init__(self,domain='gw.api.taobao.com',port=80):
+
+F:\zema-recognition\zema-recognition\app\top\api\rest\WlbInventorySyncRequest.py:
+    2  Created by auto_sdk on 2016.03.05
+    3  '''
+    4: from   app.top.api.base import RestApi
+    5  class WlbInventorySyncRequest(RestApi):
+    6  	def __init__(self,domain='gw.api.taobao.com',port=80):
+
+F:\zema-recognition\zema-recognition\app\top\api\rest\WlbItemAddRequest.py:
+    2  Created by auto_sdk on 2016.04.13
+    3  '''
+    4: from   app.top.api.base import RestApi
+    5  class WlbItemAddRequest(RestApi):
+    6  	def __init__(self,domain='gw.api.taobao.com',port=80):
+
+F:\zema-recognition\zema-recognition\app\top\api\rest\WlbItemAuthorizationAddRequest.py:
+    2  Created by auto_sdk on 2016.03.05
+    3  '''
+    4: from   app.top.api.base import RestApi
+    5  class WlbItemAuthorizationAddRequest(RestApi):
+    6  	def __init__(self,domain='gw.api.taobao.com',port=80):
+
+F:\zema-recognition\zema-recognition\app\top\api\rest\WlbItemAuthorizationQueryRequest.py:
+    2  Created by auto_sdk on 2016.03.05
+    3  '''
+    4: from   app.top.api.base import RestApi
+    5  class WlbItemAuthorizationQueryRequest(RestApi):
+    6  	def __init__(self,domain='gw.api.taobao.com',port=80):
+
+F:\zema-recognition\zema-recognition\app\top\api\rest\WlbItemBatchQueryRequest.py:
+    2  Created by auto_sdk on 2014.11.04
+    3  '''
+    4: from   app.top.api.base import RestApi
+    5  class WlbItemBatchQueryRequest(RestApi):
+    6  	def __init__(self,domain='gw.api.taobao.com',port=80):
+
+F:\zema-recognition\zema-recognition\app\top\api\rest\WlbItemCombinationCreateRequest.py:
+    2  Created by auto_sdk on 2016.03.05
+    3  '''
+    4: from   app.top.api.base import RestApi
+    5  class WlbItemCombinationCreateRequest(RestApi):
+    6  	def __init__(self,domain='gw.api.taobao.com',port=80):
+
+F:\zema-recognition\zema-recognition\app\top\api\rest\WlbItemCombinationDeleteRequest.py:
+    2  Created by auto_sdk on 2016.03.05
+    3  '''
+    4: from   app.top.api.base import RestApi
+    5  class WlbItemCombinationDeleteRequest(RestApi):
+    6  	def __init__(self,domain='gw.api.taobao.com',port=80):
+
+F:\zema-recognition\zema-recognition\app\top\api\rest\WlbItemCombinationGetRequest.py:
+    2  Created by auto_sdk on 2016.03.19
+    3  '''
+    4: from   app.top.api.base import RestApi
+    5  class WlbItemCombinationGetRequest(RestApi):
+    6  	def __init__(self,domain='gw.api.taobao.com',port=80):
+
+F:\zema-recognition\zema-recognition\app\top\api\rest\WlbItemConsignmentCreateRequest.py:
+    2  Created by auto_sdk on 2016.03.05
+    3  '''
+    4: from   app.top.api.base import RestApi
+    5  class WlbItemConsignmentCreateRequest(RestApi):
+    6  	def __init__(self,domain='gw.api.taobao.com',port=80):
+
+F:\zema-recognition\zema-recognition\app\top\api\rest\WlbItemConsignmentDeleteRequest.py:
+    2  Created by auto_sdk on 2016.03.05
+    3  '''
+    4: from   app.top.api.base import RestApi
+    5  class WlbItemConsignmentDeleteRequest(RestApi):
+    6  	def __init__(self,domain='gw.api.taobao.com',port=80):
+
+F:\zema-recognition\zema-recognition\app\top\api\rest\WlbItemConsignmentPageGetRequest.py:
+    2  Created by auto_sdk on 2016.03.05
+    3  '''
+    4: from   app.top.api.base import RestApi
+    5  class WlbItemConsignmentPageGetRequest(RestApi):
+    6  	def __init__(self,domain='gw.api.taobao.com',port=80):
+
+F:\zema-recognition\zema-recognition\app\top\api\rest\WlbItemConsignmentQueryRequest.py:
+    2  Created by auto_sdk on 2016.03.05
+    3  '''
+    4: from   app.top.api.base import RestApi
+    5  class WlbItemConsignmentQueryRequest(RestApi):
+    6  	def __init__(self,domain='gw.api.taobao.com',port=80):
+
+F:\zema-recognition\zema-recognition\app\top\api\rest\WlbItemDeleteRequest.py:
+    2  Created by auto_sdk on 2016.03.05
+    3  '''
+    4: from   app.top.api.base import RestApi
+    5  class WlbItemDeleteRequest(RestApi):
+    6  	def __init__(self,domain='gw.api.taobao.com',port=80):
+
+F:\zema-recognition\zema-recognition\app\top\api\rest\WlbItemGetRequest.py:
+    2  Created by auto_sdk on 2016.03.15
+    3  '''
+    4: from   app.top.api.base import RestApi
+    5  class WlbItemGetRequest(RestApi):
+    6  	def __init__(self,domain='gw.api.taobao.com',port=80):
+
+F:\zema-recognition\zema-recognition\app\top\api\rest\WlbItemMapGetByExtentityRequest.py:
+    2  Created by auto_sdk on 2016.02.26
+    3  '''
+    4: from   app.top.api.base import RestApi
+    5  class WlbItemMapGetByExtentityRequest(RestApi):
+    6  	def __init__(self,domain='gw.api.taobao.com',port=80):
+
+F:\zema-recognition\zema-recognition\app\top\api\rest\WlbItemMapGetRequest.py:
+    2  Created by auto_sdk on 2016.02.26
+    3  '''
+    4: from   app.top.api.base import RestApi
+    5  class WlbItemMapGetRequest(RestApi):
+    6  	def __init__(self,domain='gw.api.taobao.com',port=80):
+
+F:\zema-recognition\zema-recognition\app\top\api\rest\WlbItemQueryRequest.py:
+    2  Created by auto_sdk on 2014.11.04
+    3  '''
+    4: from   app.top.api.base import RestApi
+    5  class WlbItemQueryRequest(RestApi):
+    6  	def __init__(self,domain='gw.api.taobao.com',port=80):
+
+F:\zema-recognition\zema-recognition\app\top\api\rest\WlbItemSynchronizeDeleteRequest.py:
+    2  Created by auto_sdk on 2016.04.13
+    3  '''
+    4: from   app.top.api.base import RestApi
+    5  class WlbItemSynchronizeDeleteRequest(RestApi):
+    6  	def __init__(self,domain='gw.api.taobao.com',port=80):
+
+F:\zema-recognition\zema-recognition\app\top\api\rest\WlbItemSynchronizeRequest.py:
+    2  Created by auto_sdk on 2015.03.06
+    3  '''
+    4: from   app.top.api.base import RestApi
+    5  class WlbItemSynchronizeRequest(RestApi):
+    6  	def __init__(self,domain='gw.api.taobao.com',port=80):
+
+F:\zema-recognition\zema-recognition\app\top\api\rest\WlbItemUpdateRequest.py:
+    2  Created by auto_sdk on 2016.04.11
+    3  '''
+    4: from   app.top.api.base import RestApi
+    5  class WlbItemUpdateRequest(RestApi):
+    6  	def __init__(self,domain='gw.api.taobao.com',port=80):
+
+F:\zema-recognition\zema-recognition\app\top\api\rest\WlbNotifyMessageConfirmRequest.py:
+    2  Created by auto_sdk on 2016.02.17
+    3  '''
+    4: from   app.top.api.base import RestApi
+    5  class WlbNotifyMessageConfirmRequest(RestApi):
+    6  	def __init__(self,domain='gw.api.taobao.com',port=80):
+
+F:\zema-recognition\zema-recognition\app\top\api\rest\WlbNotifyMessagePageGetRequest.py:
+    2  Created by auto_sdk on 2016.02.02
+    3  '''
+    4: from   app.top.api.base import RestApi
+    5  class WlbNotifyMessagePageGetRequest(RestApi):
+    6  	def __init__(self,domain='gw.api.taobao.com',port=80):
+
+F:\zema-recognition\zema-recognition\app\top\api\rest\WlbOrderCancelRequest.py:
+    2  Created by auto_sdk on 2016.04.14
+    3  '''
+    4: from   app.top.api.base import RestApi
+    5  class WlbOrderCancelRequest(RestApi):
+    6  	def __init__(self,domain='gw.api.taobao.com',port=80):
+
+F:\zema-recognition\zema-recognition\app\top\api\rest\WlbOrderConsignRequest.py:
+    2  Created by auto_sdk on 2016.03.05
+    3  '''
+    4: from   app.top.api.base import RestApi
+    5  class WlbOrderConsignRequest(RestApi):
+    6  	def __init__(self,domain='gw.api.taobao.com',port=80):
+
+F:\zema-recognition\zema-recognition\app\top\api\rest\WlbOrderCreateRequest.py:
+    2  Created by auto_sdk on 2014.11.04
+    3  '''
+    4: from   app.top.api.base import RestApi
+    5  class WlbOrderCreateRequest(RestApi):
+    6  	def __init__(self,domain='gw.api.taobao.com',port=80):
+
+F:\zema-recognition\zema-recognition\app\top\api\rest\WlbOrderdetailDateGetRequest.py:
+    2  Created by auto_sdk on 2016.01.20
+    3  '''
+    4: from   app.top.api.base import RestApi
+    5  class WlbOrderdetailDateGetRequest(RestApi):
+    6  	def __init__(self,domain='gw.api.taobao.com',port=80):
+
+F:\zema-recognition\zema-recognition\app\top\api\rest\WlbOrderitemPageGetRequest.py:
+    2  Created by auto_sdk on 2016.02.17
+    3  '''
+    4: from   app.top.api.base import RestApi
+    5  class WlbOrderitemPageGetRequest(RestApi):
+    6  	def __init__(self,domain='gw.api.taobao.com',port=80):
+
+F:\zema-recognition\zema-recognition\app\top\api\rest\WlbOrderJzConsignRequest.py:
+    2  Created by auto_sdk on 2016.02.23
+    3  '''
+    4: from   app.top.api.base import RestApi
+    5  class WlbOrderJzConsignRequest(RestApi):
+    6  	def __init__(self,domain='gw.api.taobao.com',port=80):
+
+F:\zema-recognition\zema-recognition\app\top\api\rest\WlbOrderJzpartnerQueryRequest.py:
+    2  Created by auto_sdk on 2015.04.13
+    3  '''
+    4: from   app.top.api.base import RestApi
+    5  class WlbOrderJzpartnerQueryRequest(RestApi):
+    6  	def __init__(self,domain='gw.api.taobao.com',port=80):
+
+F:\zema-recognition\zema-recognition\app\top\api\rest\WlbOrderJzQueryRequest.py:
+    2  Created by auto_sdk on 2015.12.17
+    3  '''
+    4: from   app.top.api.base import RestApi
+    5  class WlbOrderJzQueryRequest(RestApi):
+    6  	def __init__(self,domain='gw.api.taobao.com',port=80):
+
+F:\zema-recognition\zema-recognition\app\top\api\rest\WlbOrderJzwithinsConsignRequest.py:
+    2  Created by auto_sdk on 2015.03.11
+    3  '''
+    4: from   app.top.api.base import RestApi
+    5  class WlbOrderJzwithinsConsignRequest(RestApi):
+    6  	def __init__(self,domain='gw.api.taobao.com',port=80):
+
+F:\zema-recognition\zema-recognition\app\top\api\rest\WlbOrderPageGetRequest.py:
+    2  Created by auto_sdk on 2016.01.13
+    3  '''
+    4: from   app.top.api.base import RestApi
+    5  class WlbOrderPageGetRequest(RestApi):
+    6  	def __init__(self,domain='gw.api.taobao.com',port=80):
+
+F:\zema-recognition\zema-recognition\app\top\api\rest\WlbOrderstatusGetRequest.py:
+    2  Created by auto_sdk on 2016.04.11
+    3  '''
+    4: from   app.top.api.base import RestApi
+    5  class WlbOrderstatusGetRequest(RestApi):
+    6  	def __init__(self,domain='gw.api.taobao.com',port=80):
+
+F:\zema-recognition\zema-recognition\app\top\api\rest\WlbOutInventoryChangeNotifyRequest.py:
+    2  Created by auto_sdk on 2014.11.04
+    3  '''
+    4: from   app.top.api.base import RestApi
+    5  class WlbOutInventoryChangeNotifyRequest(RestApi):
+    6  	def __init__(self,domain='gw.api.taobao.com',port=80):
+
+F:\zema-recognition\zema-recognition\app\top\api\rest\WlbReplenishStatisticsRequest.py:
+    2  Created by auto_sdk on 2016.03.05
+    3  '''
+    4: from   app.top.api.base import RestApi
+    5  class WlbReplenishStatisticsRequest(RestApi):
+    6  	def __init__(self,domain='gw.api.taobao.com',port=80):
+
+F:\zema-recognition\zema-recognition\app\top\api\rest\WlbSubscriptionQueryRequest.py:
+    2  Created by auto_sdk on 2016.03.31
+    3  '''
+    4: from   app.top.api.base import RestApi
+    5  class WlbSubscriptionQueryRequest(RestApi):
+    6  	def __init__(self,domain='gw.api.taobao.com',port=80):
+
+F:\zema-recognition\zema-recognition\app\top\api\rest\WlbTmsorderQueryRequest.py:
+    2  Created by auto_sdk on 2016.04.13
+    3  '''
+    4: from   app.top.api.base import RestApi
+    5  class WlbTmsorderQueryRequest(RestApi):
+    6  	def __init__(self,domain='gw.api.taobao.com',port=80):
+
+F:\zema-recognition\zema-recognition\app\top\api\rest\WlbTradeorderGetRequest.py:
+    2  Created by auto_sdk on 2016.01.12
+    3  '''
+    4: from   app.top.api.base import RestApi
+    5  class WlbTradeorderGetRequest(RestApi):
+    6  	def __init__(self,domain='gw.api.taobao.com',port=80):
+
+F:\zema-recognition\zema-recognition\app\top\api\rest\WlbWaybillICancelRequest.py:
+    2  Created by auto_sdk on 2015.11.03
+    3  '''
+    4: from   app.top.api.base import RestApi
+    5  class WlbWaybillICancelRequest(RestApi):
+    6  	def __init__(self,domain='gw.api.taobao.com',port=80):
+
+F:\zema-recognition\zema-recognition\app\top\api\rest\WlbWaybillIFullupdateRequest.py:
+    2  Created by auto_sdk on 2015.11.03
+    3  '''
+    4: from   app.top.api.base import RestApi
+    5  class WlbWaybillIFullupdateRequest(RestApi):
+    6  	def __init__(self,domain='gw.api.taobao.com',port=80):
+
+F:\zema-recognition\zema-recognition\app\top\api\rest\WlbWaybillIGetRequest.py:
+    2  Created by auto_sdk on 2016.03.24
+    3  '''
+    4: from   app.top.api.base import RestApi
+    5  class WlbWaybillIGetRequest(RestApi):
+    6  	def __init__(self,domain='gw.api.taobao.com',port=80):
+
+F:\zema-recognition\zema-recognition\app\top\api\rest\WlbWaybillIPrintRequest.py:
+    2  Created by auto_sdk on 2016.03.22
+    3  '''
+    4: from   app.top.api.base import RestApi
+    5  class WlbWaybillIPrintRequest(RestApi):
+    6  	def __init__(self,domain='gw.api.taobao.com',port=80):
+
+F:\zema-recognition\zema-recognition\app\top\api\rest\WlbWaybillIProductRequest.py:
+    2  Created by auto_sdk on 2015.04.03
+    3  '''
+    4: from   app.top.api.base import RestApi
+    5  class WlbWaybillIProductRequest(RestApi):
+    6  	def __init__(self,domain='gw.api.taobao.com',port=80):
+
+F:\zema-recognition\zema-recognition\app\top\api\rest\WlbWaybillIQuerydetailRequest.py:
+    2  Created by auto_sdk on 2015.11.03
+    3  '''
+    4: from   app.top.api.base import RestApi
+    5  class WlbWaybillIQuerydetailRequest(RestApi):
+    6  	def __init__(self,domain='gw.api.taobao.com',port=80):
+
+F:\zema-recognition\zema-recognition\app\top\api\rest\WlbWaybillISearchRequest.py:
+    2  Created by auto_sdk on 2015.11.03
+    3  '''
+    4: from   app.top.api.base import RestApi
+    5  class WlbWaybillISearchRequest(RestApi):
+    6  	def __init__(self,domain='gw.api.taobao.com',port=80):
+
+F:\zema-recognition\zema-recognition\app\top\api\rest\WlbWlborderGetRequest.py:
+    2  Created by auto_sdk on 2016.01.12
+    3  '''
+    4: from   app.top.api.base import RestApi
+    5  class WlbWlborderGetRequest(RestApi):
+    6  	def __init__(self,domain='gw.api.taobao.com',port=80):
+
+F:\zema-recognition\zema-recognition\app\top\api\rest\WlbWmsCainiaoBillQueryRequest.py:
+    2  Created by auto_sdk on 2016.06.03
+    3  '''
+    4: from   app.top.api.base import RestApi
+    5  class WlbWmsCainiaoBillQueryRequest(RestApi):
+    6  	def __init__(self,domain='gw.api.taobao.com',port=80):
+
+F:\zema-recognition\zema-recognition\app\top\api\rest\WlbWmsConsignBillGetRequest.py:
+    2  Created by auto_sdk on 2016.01.25
+    3  '''
+    4: from   app.top.api.base import RestApi
+    5  class WlbWmsConsignBillGetRequest(RestApi):
+    6  	def __init__(self,domain='gw.api.taobao.com',port=80):
+
+F:\zema-recognition\zema-recognition\app\top\api\rest\WlbWmsConsignInventoryOccupancyRequest.py:
+    2  Created by auto_sdk on 2016.05.25
+    3  '''
+    4: from   app.top.api.base import RestApi
+    5  class WlbWmsConsignInventoryOccupancyRequest(RestApi):
+    6  	def __init__(self,domain='gw.api.taobao.com',port=80):
+
+F:\zema-recognition\zema-recognition\app\top\api\rest\WlbWmsConsignInventoryReleaseRequest.py:
+    2  Created by auto_sdk on 2016.05.25
+    3  '''
+    4: from   app.top.api.base import RestApi
+    5  class WlbWmsConsignInventoryReleaseRequest(RestApi):
+    6  	def __init__(self,domain='gw.api.taobao.com',port=80):
+
+F:\zema-recognition\zema-recognition\app\top\api\rest\WlbWmsConsignOrderConfirmRequest.py:
+    2  Created by auto_sdk on 2016.03.04
+    3  '''
+    4: from   app.top.api.base import RestApi
+    5  class WlbWmsConsignOrderConfirmRequest(RestApi):
+    6  	def __init__(self,domain='gw.api.taobao.com',port=80):
+
+F:\zema-recognition\zema-recognition\app\top\api\rest\WlbWmsConsignOrderNotifyRequest.py:
+    2  Created by auto_sdk on 2016.04.07
+    3  '''
+    4: from   app.top.api.base import RestApi
+    5  class WlbWmsConsignOrderNotifyRequest(RestApi):
+    6  	def __init__(self,domain='gw.api.taobao.com',port=80):
+
+F:\zema-recognition\zema-recognition\app\top\api\rest\WlbWmsConsignOutstockGetRequest.py:
+    2  Created by auto_sdk on 2015.09.22
+    3  '''
+    4: from   app.top.api.base import RestApi
+    5  class WlbWmsConsignOutstockGetRequest(RestApi):
+    6  	def __init__(self,domain='gw.api.taobao.com',port=80):
+
+F:\zema-recognition\zema-recognition\app\top\api\rest\WlbWmsInventoryCountRequest.py:
+    2  Created by auto_sdk on 2016.05.30
+    3  '''
+    4: from   app.top.api.base import RestApi
+    5  class WlbWmsInventoryCountRequest(RestApi):
+    6  	def __init__(self,domain='gw.api.taobao.com',port=80):
+
+F:\zema-recognition\zema-recognition\app\top\api\rest\WlbWmsInventoryLackUploadRequest.py:
+    2  Created by auto_sdk on 2015.09.17
+    3  '''
+    4: from   app.top.api.base import RestApi
+    5  class WlbWmsInventoryLackUploadRequest(RestApi):
+    6  	def __init__(self,domain='gw.api.taobao.com',port=80):
+
+F:\zema-recognition\zema-recognition\app\top\api\rest\WlbWmsInventoryProfitlossGetRequest.py:
+    2  Created by auto_sdk on 2015.09.22
+    3  '''
+    4: from   app.top.api.base import RestApi
+    5  class WlbWmsInventoryProfitlossGetRequest(RestApi):
+    6  	def __init__(self,domain='gw.api.taobao.com',port=80):
+
+F:\zema-recognition\zema-recognition\app\top\api\rest\WlbWmsInventoryQueryRequest.py:
+    2  Created by auto_sdk on 2015.11.16
+    3  '''
+    4: from   app.top.api.base import RestApi
+    5  class WlbWmsInventoryQueryRequest(RestApi):
+    6  	def __init__(self,domain='gw.api.taobao.com',port=80):
+
+F:\zema-recognition\zema-recognition\app\top\api\rest\WlbWmsInventoryStatusUploadRequest.py:
+    2  Created by auto_sdk on 2015.08.12
+    3  '''
+    4: from   app.top.api.base import RestApi
+    5  class WlbWmsInventoryStatusUploadRequest(RestApi):
+    6  	def __init__(self,domain='gw.api.taobao.com',port=80):
+
+F:\zema-recognition\zema-recognition\app\top\api\rest\WlbWmsItemCombinationCreateRequest.py:
+    2  Created by auto_sdk on 2016.05.17
+    3  '''
+    4: from   app.top.api.base import RestApi
+    5  class WlbWmsItemCombinationCreateRequest(RestApi):
+    6  	def __init__(self,domain='gw.api.taobao.com',port=80):
+
+F:\zema-recognition\zema-recognition\app\top\api\rest\WlbWmsItemCombinationDeleteRequest.py:
+    2  Created by auto_sdk on 2016.05.22
+    3  '''
+    4: from   app.top.api.base import RestApi
+    5  class WlbWmsItemCombinationDeleteRequest(RestApi):
+    6  	def __init__(self,domain='gw.api.taobao.com',port=80):
+
+F:\zema-recognition\zema-recognition\app\top\api\rest\WlbWmsItemCombinationGetRequest.py:
+    2  Created by auto_sdk on 2016.05.17
+    3  '''
+    4: from   app.top.api.base import RestApi
+    5  class WlbWmsItemCombinationGetRequest(RestApi):
+    6  	def __init__(self,domain='gw.api.taobao.com',port=80):
+
+F:\zema-recognition\zema-recognition\app\top\api\rest\WlbWmsOrderCancelNotifyRequest.py:
+    2  Created by auto_sdk on 2015.08.17
+    3  '''
+    4: from   app.top.api.base import RestApi
+    5  class WlbWmsOrderCancelNotifyRequest(RestApi):
+    6  	def __init__(self,domain='gw.api.taobao.com',port=80):
+
+F:\zema-recognition\zema-recognition\app\top\api\rest\WlbWmsOrderStatusUploadRequest.py:
+    2  Created by auto_sdk on 2016.05.19
+    3  '''
+    4: from   app.top.api.base import RestApi
+    5  class WlbWmsOrderStatusUploadRequest(RestApi):
+    6  	def __init__(self,domain='gw.api.taobao.com',port=80):
+
+F:\zema-recognition\zema-recognition\app\top\api\rest\WlbWmsReturnBillGetRequest.py:
+    2  Created by auto_sdk on 2015.10.08
+    3  '''
+    4: from   app.top.api.base import RestApi
+    5  class WlbWmsReturnBillGetRequest(RestApi):
+    6  	def __init__(self,domain='gw.api.taobao.com',port=80):
+
+F:\zema-recognition\zema-recognition\app\top\api\rest\WlbWmsReturnOrderNotifyRequest.py:
+    2  Created by auto_sdk on 2015.08.17
+    3  '''
+    4: from   app.top.api.base import RestApi
+    5  class WlbWmsReturnOrderNotifyRequest(RestApi):
+    6  	def __init__(self,domain='gw.api.taobao.com',port=80):
+
+F:\zema-recognition\zema-recognition\app\top\api\rest\WlbWmsSkuCombinationCreateUpdateRequest.py:
+    2  Created by auto_sdk on 2015.08.17
+    3  '''
+    4: from   app.top.api.base import RestApi
+    5  class WlbWmsSkuCombinationCreateUpdateRequest(RestApi):
+    6  	def __init__(self,domain='gw.api.taobao.com',port=80):
+
+F:\zema-recognition\zema-recognition\app\top\api\rest\WlbWmsSkuCreateRequest.py:
+    2  Created by auto_sdk on 2016.05.25
+    3  '''
+    4: from   app.top.api.base import RestApi
+    5  class WlbWmsSkuCreateRequest(RestApi):
+    6  	def __init__(self,domain='gw.api.taobao.com',port=80):
+
+F:\zema-recognition\zema-recognition\app\top\api\rest\WlbWmsSkuGetRequest.py:
+    2  Created by auto_sdk on 2016.05.24
+    3  '''
+    4: from   app.top.api.base import RestApi
+    5  class WlbWmsSkuGetRequest(RestApi):
+    6  	def __init__(self,domain='gw.api.taobao.com',port=80):
+
+F:\zema-recognition\zema-recognition\app\top\api\rest\WlbWmsSkuInfoConfirmRequest.py:
+    2  Created by auto_sdk on 2016.01.29
+    3  '''
+    4: from   app.top.api.base import RestApi
+    5  class WlbWmsSkuInfoConfirmRequest(RestApi):
+    6  	def __init__(self,domain='gw.api.taobao.com',port=80):
+
+F:\zema-recognition\zema-recognition\app\top\api\rest\WlbWmsSkuUpdateRequest.py:
+    2  Created by auto_sdk on 2016.05.24
+    3  '''
+    4: from   app.top.api.base import RestApi
+    5  class WlbWmsSkuUpdateRequest(RestApi):
+    6  	def __init__(self,domain='gw.api.taobao.com',port=80):
+
+F:\zema-recognition\zema-recognition\app\top\api\rest\WlbWmsSnInfoQueryRequest.py:
+    2  Created by auto_sdk on 2016.03.15
+    3  '''
+    4: from   app.top.api.base import RestApi
+    5  class WlbWmsSnInfoQueryRequest(RestApi):
+    6  	def __init__(self,domain='gw.api.taobao.com',port=80):
+
+F:\zema-recognition\zema-recognition\app\top\api\rest\WlbWmsStockInBillGetRequest.py:
+    2  Created by auto_sdk on 2015.09.22
+    3  '''
+    4: from   app.top.api.base import RestApi
+    5  class WlbWmsStockInBillGetRequest(RestApi):
+    6  	def __init__(self,domain='gw.api.taobao.com',port=80):
+
+F:\zema-recognition\zema-recognition\app\top\api\rest\WlbWmsStockInOrderConfirmRequest.py:
+    2  Created by auto_sdk on 2015.09.17
+    3  '''
+    4: from   app.top.api.base import RestApi
+    5  class WlbWmsStockInOrderConfirmRequest(RestApi):
+    6  	def __init__(self,domain='gw.api.taobao.com',port=80):
+
+F:\zema-recognition\zema-recognition\app\top\api\rest\WlbWmsStockInOrderNotifyRequest.py:
+    2  Created by auto_sdk on 2015.09.16
+    3  '''
+    4: from   app.top.api.base import RestApi
+    5  class WlbWmsStockInOrderNotifyRequest(RestApi):
+    6  	def __init__(self,domain='gw.api.taobao.com',port=80):
+
+F:\zema-recognition\zema-recognition\app\top\api\rest\WlbWmsStockOutBillGetRequest.py:
+    2  Created by auto_sdk on 2015.09.22
+    3  '''
+    4: from   app.top.api.base import RestApi
+    5  class WlbWmsStockOutBillGetRequest(RestApi):
+    6  	def __init__(self,domain='gw.api.taobao.com',port=80):
+
+F:\zema-recognition\zema-recognition\app\top\api\rest\WlbWmsStockOutOrderConfirmRequest.py:
+    2  Created by auto_sdk on 2015.07.27
+    3  '''
+    4: from   app.top.api.base import RestApi
+    5  class WlbWmsStockOutOrderConfirmRequest(RestApi):
+    6  	def __init__(self,domain='gw.api.taobao.com',port=80):
+
+F:\zema-recognition\zema-recognition\app\top\api\rest\WlbWmsStockOutOrderNotifyRequest.py:
+    2  Created by auto_sdk on 2015.09.16
+    3  '''
+    4: from   app.top.api.base import RestApi
+    5  class WlbWmsStockOutOrderNotifyRequest(RestApi):
+    6  	def __init__(self,domain='gw.api.taobao.com',port=80):
+
+F:\zema-recognition\zema-recognition\app\top\api\rest\WlbWmsStockPruductProcessingNotifyRequest.py:
+    2  Created by auto_sdk on 2015.08.17
+    3  '''
+    4: from   app.top.api.base import RestApi
+    5  class WlbWmsStockPruductProcessingNotifyRequest(RestApi):
+    6  	def __init__(self,domain='gw.api.taobao.com',port=80):
+
+F:\zema-recognition\zema-recognition\app\top\api\rest\WlbWmsUnknownPackageUploadRequest.py:
+    2  Created by auto_sdk on 2016.06.12
+    3  '''
+    4: from   app.top.api.base import RestApi
+    5  class WlbWmsUnknownPackageUploadRequest(RestApi):
+    6  	def __init__(self,domain='gw.api.taobao.com',port=80):
+
+F:\zema-recognition\zema-recognition\app\top\api\rest\WmsOrderWarehouseRouteGetRequest.py:
+    2  Created by auto_sdk on 2015.08.14
+    3  '''
+    4: from   app.top.api.base import RestApi
+    5  class WmsOrderWarehouseRouteGetRequest(RestApi):
+    6  	def __init__(self,domain='gw.api.taobao.com',port=80):
+
+184 matches across 184 files

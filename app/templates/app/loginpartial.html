@@ -1,0 +1,17 @@
+{% if user.is_authenticated %}
+<form id="logoutForm" action="/logout" method="post" class="navbar-right">
+    {% csrf_token %}
+    <ul class="nav navbar-nav navbar-right">
+        <li><span class="navbar-brand small">Hello {{ user.username }}!</span></li>
+        <li><a href="javascript:document.getElementById('logoutForm').submit()" class="small">退出</a></li>
+    </ul>
+
+</form>
+
+{% else %}
+
+<ul class="nav navbar-nav navbar-right">
+    <li><a href="{% url 'login' %}">登录</a></li>
+</ul>
+
+{% endif %}

@@ -1,0 +1,189 @@
+
+
+
+
+{% extends "app/layout.html" %}
+
+{% block content %}
+
+ {% include 'app/head2.html' %}
+
+    {% load staticfiles %}
+<div class="col-lg-12 col-md-12 col-sm-12"style="margin-top:50px;">
+	<div class="col-lg-2 col-sm-2 col-md-2">		
+	         <img src="{{comm.pic_url}}"style="width:90px;height:90px;" 
+	         title="主图" jqimg="{{comm.pic_url}}">	  
+	</div>
+	<div class="col-lg-8 col-md-8 col-sm-8">
+		<div class="title">
+			<p>{{comm.title}}</p>					
+		</div>
+		<div class="outer">
+			<p >整体外部编码:{{comm.od_outer_id}}</p>	
+			{%if comm.onsale%}	
+			<a href="https://detail.tmall.com/item.htm?id={{comm.num_iid}}"target="_blank" class="btn btn-default btn-xs pull-left"title="">出售中
+			<span class="glyphicon glyphicon-ok" style="color:lime;"></span></a>	
+			{%else%}
+			<p class="col-lg-6">仓库
+			<span class="glyphicon glyphicon-remove"  style="color:red;"></span></p>
+			{%endif%}	
+			{%if comm.sync%}	
+				<a href="{%url 'detail_sku'%}?id={{request.GET.id}}"target="_blank" title=""  class="btn btn-default btn-xs pull-right">已录入
+				<span class="glyphicon glyphicon-ok" style="color:lime;"></span></a>
+			{%else%}
+				<p class="btn btn-default btn-xs pull-right disabled">未录入
+				<span class="glyphicon glyphicon-remove"  style="color:red;"></span></p>
+			{%endif%}	
+		</div>
+		</div>
+<div class="text-center col-md-12">
+	<a href="#" class="btn-warning btn btn-lg" id="commoditysync">重新同步数据</a>
+</div>
+<input type="hidden" id="GETid" value="{{request.GET.id}}" /> 
+
+
+
+
+</div>
+
+
+
+<table class="table col-lg-12 col-md-12 col-sm-12 table-condensed table-bordered" style="margin-top:30px;">
+	
+	<thead>
+		<tr>
+			<th class="text-center">SKU图片 
+				<div class="input-group-xs">
+				<span class="allcheckbox input-group-addon btn">全选</span>
+				<span class="input-group-addon btn recleckbox">反选</span>
+				
+			</div></th>
+			<th  class="text-center">衣服类型 <a href="#" class="btn btn-success addclothe" title=""><span class="glyphicon glyphicon-plus"></span>批量增加类型</a></th>
+			<th  class="text-center">颜色信息</th>			
+			<th  class="text-center">画师图片
+<span  class=" btn btn-success code-add " data-order="0" id="code-add"><span class="glyphicon glyphicon-plus"></span>批量添加图片</span></th>
+		
+		</tr>
+	</thead>
+	<tbody>
+		{%for x in sku%}
+			<tr  class="sku" data-id="{{x.id}}-0" data-odcolor="{{x.od_color}}" data-order="0" >
+				<td href="{{x.url}}" rowspan="1" class="thumbnail col-lg-2 col-sm-2 col-md-2 img-row-{{x.id}}" data-id="{{x.id}}"  >
+					<input type="checkbox" class="form-control  checkbox-title" data-id="{{x.id}}" data-num="1" />
+					<img  src="{{x.url}}" style="width:90px;height:90px;" alt="" jqimg="{{x.url}}" data-id="{{x.id}}" data-color="{{x.od_color}}">
+					<div class="text-center">
+						<small >颜色:{{x.od_color}}</small>
+						<br>
+					<small >原编码:<br>{{x.od_outer_id}}</small>
+					</div>
+					
+				</td>
+
+				<td class=" col-lg-3 col-sm-3 col-md-3 clothe-row-{{x.id}} " data-order="0" data-id="{{x.id}}" id="clothe-row-{{x.id}}">
+					<div class="input-group input-group-sm clothe-div-{{x.id}}" data-order="0" style="margin-top:10px;" >
+							<select name="clothe" class="form-control clothe clothe-{{x.id}}" data-order="0" data-id="{{x.id}}" >
+								{%for e in clothe%}
+								<option value="{{e.id}}">{{e.name}}</option>
+								{%endfor%}								
+							</select>
+							<input type="hidden" name="{{x.od_color}}" id="color{{x.id}}" data-order="0">
+						<span style="margin-top:10px;" class="input-group-addon btn btn-success type-sync" data-type="types" data-order="0" data-id="{{x.id}}">同步</span>
+						<span style="margin-top:10px;" class="input-group-addon btn btn-danger type-delete" data-type="types" data-order="0" data-id="{{x.id}}">删除</span>
+					</div>
+
+
+
+
+				<td class=" col-lg-2 col-sm-2 col-md-2 color-row-{{x.id}}" data-order="0">
+					
+						<select  name="color{{x.id}}" style="margin-top:10px;" class="form-control input-sm color-select color-{{x.id}}" data-id="{{x.id}}"  data-order="0"></select>				
+				</td>			
+
+
+
+				<td  class="col-lg-5 col-sm-5 col-md-5 pic-row-{{x.id}}" data-order="0" data-num="1" >
+					<div class="input-group input-group-sm form-inline col-lg-12 col-md-12 col-sm-12 pic-div-{{x.id}}-0" data-id="{{x.id}}" data-order="0" data-order2="0" style="margin-top:10px;float: left;" >
+						<input type="text" class="form-control pic-{{x.id}}-0" style="width:150px ;float: left;"data-order="0" name="pic{{x.id}}"  placeholder="画师图片编码"  />
+
+
+						<span style="float: left;width:40px;" class="input-group-addon btn btn-success code-sync form-inline" data-order="0" data-order2="0"  data-id="{{x.id}}">同步</span>
+
+						<span style="float: left;width:40px;" class="input-group-addon form-inline btn btn-danger code-delete" data-type="types" data-order2="0" data-order="0" data-id="{{x.id}}">删除</span>
+
+						
+					</div>
+
+					
+
+
+
+
+					<a href="#" class="btn btn-success code-add code-add-{{x.id}}"  data-id="{{x.id}}" data-order="0" ><span class="glyphicon glyphicon-plus"></span>增加一张图</a>
+
+
+			</td>
+
+
+			</tr>
+
+
+
+
+
+		{%endfor%}
+	</tbody>
+</table>
+
+
+
+<div class="text-center">
+	<button type="button" class="btn btn-success btn-lg" id="save-all">保存并上传</button>
+</div>
+
+
+
+<div class="modal fade" id="showimgs" tabindex="-1" role="dialog" 
+   aria-labelledby="myModalLabel" aria-hidden="true">
+   <div class="modal-dialog">
+      <div class="modal-content">
+        
+         <div class="modal-body">
+         	<img id="show-target" style="width:550px" src="">
+            
+         </div>
+        
+      </div><!-- /.modal-content -->
+</div><!-- /.modal -->
+</div>
+
+
+
+
+
+
+    
+         <div style="position:fixed;top:0;left:0;height: 100%;width: 100%;background-color:#262626;opacity:0.8;z-index:300;display: none;" id="loading"  >
+         	<img  style="width:500px;position:absolute;top:33%;left:38%; " src="{%static 'app/image/save.gif' %}">            
+         </div>
+
+
+
+
+
+{%endblock%}
+
+
+
+
+
+
+
+
+{%block scripts%}
+
+
+    {% load staticfiles %}
+<script src="{%static 'app/scripts/clothe.js'%}" type="text/javascript" charset="utf-8" async defer></script>
+
+
+{%endblock%}

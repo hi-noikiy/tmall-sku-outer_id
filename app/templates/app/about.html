@@ -1,0 +1,169 @@
+{% extends "app/layout.html" %}
+
+{% block content %}
+
+
+
+
+    {% load staticfiles %}
+
+
+
+
+
+ <div class="col-md-12 col-lg-12">
+
+      <ul class="nav nav-tabs">
+      
+        <li class="commodity-all"><a href="{%url 'commodity-all'%}">全部商品</a></li>
+        <li class="onsale"><a href="{%url 'commodity-all'%}?onsale=1">出售中</a></li>
+        <li class="instock"><a href="{%url 'commodity-all'%}?onsale=0">仓库中</a></li>
+       
+      </ul>
+ </div>
+
+
+
+
+<div class="panel pull-right"  style='padding:0;margin: 0;'>
+	<div class="panel-body" style='padding:0;margin: 0;'>
+		<form action="." method="get" accept-charset="utf-8">
+		<input type="text" class='form-control' name="wd" value="" placeholder="请输入商品id查询" >
+		<button class="btn btn-default" type="submit">提交</button>
+		</form>
+		</div>
+</div>
+
+<div class="container col-lg-12" style="margin-top: 50px">
+	<div class="row" id="commodity">
+	
+
+	{%if comm%}	
+		<div class="panel panel-default col-lg-12 col-sm-12 col-md-12"style="margin:0px;">
+			<div class="panel-heading">
+				<h3 class="panel-title">
+				筛选
+				</h3>
+			</div>
+			<div class="panel-body">
+				<div class="text-center">
+					<a href="{%url 'commodity-all'%}?types=1&onsale={{request.GET.onsale}}" class="btn btn-default btn-xs data-1">未录入</a>
+					<a href="{%url 'commodity-all'%}?types=0&onsale={{request.GET.onsale}}" class="btn btn-default btn-xs data-0">已录入</a>
+					<a href="{%url 'commodity-all'%}?types=2&onsale={{request.GET.onsale}}" class="btn btn-default btn-xs data-2">全部</a>
+				</div>	
+			</div>
+		</div>
+
+
+
+
+
+		{%include "app/pager.html"%}
+
+		{%include "app/commlist.html"%}
+
+		{%include "app/pager.html"%}
+	{%else%}
+	<div class="text-center" id="download">
+		<p class="lead">还没有下载任何商品</p>
+	<button type="button"  class="btn btn-default btn-lg sync">同步商品列表</button>
+	</div>
+	
+
+	{%endif%}
+
+
+
+		
+	</div>
+</div>
+
+
+
+
+  <div style="position:fixed;top:0;left:0;height: 100%;width: 100%;background-color:#262626;opacity:0.8;z-index:300;display: none;" id="loading"  >
+         	<img  style="width:500px;position:absolute;top:33%;left:38%; " src="{%static 'app/image/save3.gif' %}">            
+         </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+{% endblock %}
+
+
+
+
+{% block scripts %}
+<script type="text/javascript">	
+$(function(){
+
+
+	$(".sync").click(function(){	
+	if(confirm("这里是更新全部商品列表,可能会消耗大量时间,\n 请问要继续吗?")){
+		$(this).attr({"disabled":"disabled"}).text("正在下载商品");
+
+		$("#loading").show(500);
+
+
+		$.ajax({
+			url:"{%url 'sync'%}",
+			type:"get",
+			dataType:"html",
+			success:function(req){
+		
+				$("#commodity").append($(req));
+				$("#download").remove();
+
+				$("#loading").hide(500);
+
+				
+			}
+		});
+
+		};
+	});
+{%if not request.GET.onsale%}
+$(".commodity-all").addClass("active");
+{%endif%}
+if ($(".data-{{request.GET.types}}").length>0) {
+	$(".data-{{request.GET.types}}").removeClass("btn-default").addClass("btn-primary")
+}else{
+	$(".data-2").removeClass("btn-default").addClass("btn-primary")
+}
+
+{%ifequal request.GET.onsale "1"%}
+
+$(".onsale").addClass("active");
+
+{%else%}
+{%ifequal request.GET.onsale "0"%}
+
+$(".instock").addClass("active");
+
+{%endifequal%}{%endifequal%}
+
+
+$(".godetail").click(function(){
+
+
+$("#loading").show(500);
+
+
+
+});
+
+
+
+})
+</script>
+
+{% endblock %}

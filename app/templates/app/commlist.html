@@ -1,0 +1,39 @@
+
+{%for x in comm%}
+<div class="col-lg-6 col-md-6 col-sm-6">
+	<div class="col-lg-4 col-sm-4 col-md-4">
+		 <a href="{%url 'detail'%}?id={{x.id}}" class="thumbnail godetail">
+	         <img src="{{x.pic_url}}"style="width:90px;height:90px;" 
+	         alt="淘宝主图">
+	      </a>
+	</div>
+	<div class="col-lg-8 col-md-8 col-sm-8">
+		<div class="title"><a href="{%url 'detail'%}?id={{x.id}}"class="godetail" title="">
+			<p>{{x.title}}</p>	</a>				
+		</div>
+		<div class="outer">
+			<p >整体外部编码:{{x.od_outer_id}}</p>				
+			{%if x.onsale%}	
+				<a href="https://detail.tmall.com/item.htm?id={{x.num_iid}}"target="_blank"title=""  class="btn btn-default btn-xs" >出售中
+				<span class="glyphicon glyphicon-ok" style="color:lime;"></span></a>
+			{%else%}
+				<a href="https://detail.tmall.com/item.htm?id={{x.num_iid}}"target="_blank"title=""  class="btn btn-default btn-xs" >仓库
+				<span class="glyphicon glyphicon-remove"  style="color:red;"></span></a>
+			{%endif%}	
+			{%if x.sync%}	
+			<a href="{%url 'detail_sku'%}?id={{x.id}}"target="_blank" class="btn btn-default btn-xs" title="">	已录入
+				<span class="glyphicon glyphicon-ok" style="color:lime;"></span></a>	
+			{%else%}
+				<a href="#"target="_blank" class="btn btn-default btn-xs disabled" title="">未录入
+				<span class="glyphicon glyphicon-remove"  style="color:red;"></span></a>
+			{%endif%}		
+		</div>
+		</div>
+</div>
+{%endfor%}
+
+
+
+
+
+

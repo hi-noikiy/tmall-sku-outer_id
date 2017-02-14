@@ -1,0 +1,178 @@
+{% extends "app/layout.html" %}
+
+
+
+    {% load staticfiles %}
+
+
+
+
+
+{% block content %}
+<div class="jumbotron" style="padding: 200px">
+<div class="text-center">
+  <h2>{{x}}</h2>
+<h4>
+  添加新商品
+</h4>
+<form action="{%url 'home'%}" method="post" accept-charset="utf-8">
+   {% csrf_token %}
+   <div class="form-group">
+    <label><input class="form-control" name="newid"placeholder="输入新的商品ID"/></label>
+   </div>
+
+  <div class="input-group-btn"><button type="submit"class="btn btn-befault" >提交</button></div>
+</form>
+<br>
+<button type="button"  class="btn btn-default btn-lg sync">同步商品列表</button>
+  
+</div>
+
+</div>
+
+<div class="modal fade" id="login" tabindex="-1" role="dialog" 
+   aria-labelledby="myModalLabel" aria-hidden="true">
+   <div class="modal-dialog">
+      <div class="modal-content">
+         <div class="modal-header">
+            <button type="button" class="close" 
+               data-dismiss="modal" aria-hidden="true">
+                  &times;
+            </button>
+            <h4 class="modal-title" id="myModalLabel">
+             管理员登录
+            </h4>
+         </div>
+         <div class="modal-body" style="padding-top:20px;padding-bottom: 150px">
+          <div class="form">
+           <form action="/login/" method="post" accept-charset="utf-8">
+            {% csrf_token %}
+                 <div class="form-group">
+                     <label for="id_username" class="col-md-2 control-label">用户名</label>
+                     <div class="col-md-10">
+                       <input class="form-control" id="id_username" maxlength="254" name="username" placeholder="用户名" type="text">          </div>
+                 </div>
+                 <div class="form-group">
+                     <label for="id_password" class="col-md-2 control-label">密码</label>
+                     <div class="col-md-10">
+                         <input class="form-control" id="id_password" name="password" placeholder="密码" type="password">
+                     </div>
+                 </div>      
+
+                  <div class="form-group pull-right" style="margin: 30px">
+                   <button type="submit" class="btn btn-primary">
+                      登录
+                    </button>   
+                  </div>
+                     
+            </form>
+          </div>
+            
+         </div>
+       
+      </div>
+</div>
+</div>
+
+         <div style="position:fixed;top:0;left:0;height: 100%;width: 100%;background-color:#262626;opacity:0.8;z-index:300;display: none;" id="loading"  >
+          <img  style="width:500px;position:absolute;top:33%;left:38%; " src="{%static 'app/image/save3.gif' %}">            
+         </div>
+
+
+{% endblock %}
+
+
+
+
+
+
+
+
+
+
+
+
+{% block scripts %}
+<script type="text/javascript"> 
+$(function(){
+    {%if not user.is_authenticated %}
+       $('#login').modal();
+    {%endif%}
+$("#get-3day").click(function(){
+if (confirm("这里是更新最近3天的商品列表,可能会消耗大量时间,\n 请问要继续吗?")) {
+
+$(this).attr({"disabled":"disabled"});
+$("#loading").show(500);
+$.ajax({
+url:"{%url 'get3day'%}",
+type:"get",
+dataType:"json",
+success:function(req){
+  $(this).removeAttr("disabled");
+$("#loading").hide(500);
+},
+error:function(){
+$("#loading").hide(500);
+ $(this).removeAttr("disabled");
+  alert("服务器内部出现问题, 请稍后再试!或请联系程序猿");
+}
+
+
+
+
+
+
+})
+
+
+
+
+
+};
+
+
+
+
+
+  
+});
+
+
+
+  $(".sync").click(function(){  
+  if(confirm("这里是更新全部商品列表,可能会消耗大量时间,\n 请问要继续吗?")){
+    $(this).attr({"disabled":"disabled"}).text("正在下载商品");
+
+    $("#loading").show(500);
+
+
+    $.ajax({
+      url:"{%url 'sync'%}",
+      type:"get",
+      dataType:"html",
+      success:function(req){
+    
+        $("#commodity").append($(req));
+        $("#download").remove();
+
+        $("#loading").hide(500);
+        history.go(0)
+        
+      }
+    });
+
+    };
+  });
+
+
+
+
+
+})
+</script>
+
+
+<script src="{% static 'app/scripts/jquery.validate.min.js' %}"></script>
+
+
+{% endblock %}
