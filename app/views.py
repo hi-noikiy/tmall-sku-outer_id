@@ -263,8 +263,8 @@ def register(request):
             try:
                 appkey = Appkey.objects.get(appkey=request.POST["appkey"],secret=request.POST["secret"],session=request.POST["session"])
             except:
-                Appkey(appkey=request.POST["appkey"],secret=request.POST["secret"],session=request.POST["session"],codelength = code).save()
-                appkey = Appkey.objects.get(appkey=request.POST["appkey"],secret=request.POST["secret"])
+                appkey = Appkey(appkey=request.POST["appkey"],secret=request.POST["secret"],session=request.POST["session"],codelength = code)
+                appkey .save()               
             try:
                 user = User.objects.create_user(username = request.POST['username'],password = request.POST['password1'])
                 user.is_active = True  
@@ -419,21 +419,18 @@ def  addclothe(request):
         clothe = get_object_or_404(Clothe,name=name,guid = guid,belong = request.user)
         for x in color:
             guid = getguid()
-            Color(belong=request.user,name=x,value=color[x] ,guid=guid).save()
-            clothe.color.add( get_object_or_404(Color,guid=guid))
+            color1 = Color(belong=request.user,name=x,value=color[x] ,guid=guid)
+            color1.save()
+            clothe.color.add(color1)
         for x in size:
             guid = getguid()
             si = getsizename(x)
-            Size(belong=request.user,name=si,value=size[x] ,guid=guid).save()
-            clothe.size.add( get_object_or_404(Size,guid=guid))
+            size1 = Size(belong=request.user,name=si,value=size[x] ,guid=guid)
+            size1.save()
+            clothe.size.add( size1)
         for c in clothe.color.all():
             for s in clothe.size.all():
                 ClotheSku(belong=request.user,clothe = clothe,color=c,size=s).save()
-
-
-
-
-
 
         return HttpResponse(json.dumps({"code":"ok"}),content_type="application/json")
 @logintest
@@ -528,14 +525,16 @@ def updata(request):
                                         break
                             if len(skuinner) != 1 or len(skuinner.pic.all()) != len(pic):                            
                                 guid = getguid()
-                                SkuInner(clothe_sku =clothe_sku,guid = guid ,belong = request.user).save()
-                                skuinner = SkuInner.objects.get(clothe_sku = clothe_sku,guid=guid,belong = request.user)
+                                skuinner = SkuInner(clothe_sku =clothe_sku,guid = guid ,belong = request.user)
+                                skuinner.save()
+                                
                                 for skui in pic :
                                     skuinner.pic.add(skui)
                         else:
                                 guid = getguid()
-                                SkuInner(clothe_sku =clothe_sku,guid = guid,belong = request.user ).save()
-                                skuinner = SkuInner.objects.get(clothe_sku = clothe_sku,guid=guid,belong = request.user)
+                                skuinner = SkuInner(clothe_sku =clothe_sku,guid = guid,belong = request.user )
+                                skuinner.save()
+                                
                                 for skui in pic :
                                     skuinner.pic.add(skui)
                     else:
