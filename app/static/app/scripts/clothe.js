@@ -185,8 +185,9 @@ function type_sync() {
 	if ($(".checkbox-title[data-id='"+id+"']" )[0].checked) {
 		var ids = [];
 		$(".checkbox-title").each(function() {
+			var skuid = $(this).attr("data-id");
 			if (this.checked) {	
-				$(".clothe[data-order='"+order+"']").find("option[value='" + clothe_v + "']").attr("selected", true)
+				$(".clothe-"+skuid+"[data-order='"+order+"']").find("option[value='" + clothe_v + "']").attr("selected", true)
 			};
 		});
 
@@ -201,26 +202,37 @@ function type_sync() {
 				var color_data = req.sort(function(a, b) {
 					return b.length - a.length
 				});
-				$(".color-select[data-order='" + order + "']").each(function() {
-					var id = $(this).attr("data-id");
-					if ($(".checkbox-title[data-id='"+id+"']" )[0].checked) {
-						$("option", $(this)).remove()
+
+				$(".checkbox-title").each(function(){	
+					if (this.checked) {
+						var skuid = $(this).attr("data-id");
+						var $target = $(".color-"+skuid);
+						$("option", $target).remove();
+
+
 						for (var i in color_data) {
 							var op = $("<option />").val(color_data[i]).text(color_data[i]);
-							$(this).append(op);
+							$target.append(op);
 						};
 						var color = $("#color" + id).attr("name");
+
+
 						for (var i in color_data) {
 							if (color.indexOf(color_data[i]) >= 0) {
-								$(this).find("option[value='" + color_data[i] + "']").attr("selected", true);
+								$target.find("option[value='" + color_data[i] + "']").attr("selected", true);
 
 								break
 							};
-						};
+									};
+
+
 					};
-				})
+				});
+
 			}
-		})
+			
+			
+		});
 
 	} else {
 		alert("您点击的颜色并没有选中!")
