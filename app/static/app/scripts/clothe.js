@@ -214,7 +214,7 @@ function type_sync() {
 							var op = $("<option />").val(color_data[i]).text(color_data[i]);
 							$target.append(op);
 						};
-						var color = $("#color" + id).attr("name");
+						var color = $("#color" + skuid).attr("name");
 
 
 						for (var i in color_data) {
