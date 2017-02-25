@@ -471,6 +471,9 @@ def get_color(request):
 
 
 
+import traceback as tk
+
+
 @logintest
 def updata(request):
 
@@ -493,11 +496,17 @@ def updata(request):
                 if si =="NUL":
                     return JsonResponse({"code":"error","message":"淘宝编码尺码信息不能识别!!"})
                 codes = []                
-                for e in x["data"]:                 
+                for e in x["data"]:  
+
                     try:
                         clothe = Clothe.objects.get(id=int(e["clothe"])) 
-                        clothe_sku = ClotheSku.objects.get(clothe= clothe,color__name= e["color"],size__name=si,belong = request.user)                       
+                        color5 = clothe.color.get(name__exact = e["color"])
+                        size5 = clothe.size.get(name__exact =si )
+                        clothe_sku = ClotheSku.objects.filter(clothe__exact= clothe,color__exact= color5,size__exact=size5,belong__exact = request.user)[0]                      
                     except:
+                        print(e)
+                        print(tk.format_exc())
+                        print(clothe,color5,size5)
                         raise Http404
                     
                     pic = [] 
