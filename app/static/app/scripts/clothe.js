@@ -206,7 +206,7 @@ function type_sync() {
 				$(".checkbox-title").each(function(){	
 					if (this.checked) {
 						var skuid = $(this).attr("data-id");
-						var $target = $(".color-"+skuid);
+						var $target = $(".color-"+skuid+"[data-order='"+order+"']");
 						$("option", $target).remove();
 
 
