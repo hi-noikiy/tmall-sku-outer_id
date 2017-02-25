@@ -52,7 +52,7 @@ class GetCommodity:
 			print(len(resp['items_inventory_get_response']['items']['item']))
 			return resp['items_inventory_get_response']['items']['item']
 		except Exception as e:
-			print(tk.format_exc())
+			pass
 
 
 	def get_all_commodity(self):
@@ -72,7 +72,7 @@ class GetCommodity:
 						belong = self.user
 						).save()
 				except:
-					print(tk.format_exc())
+					pass
 		for x in range(30):
 			commodity = self.get_invertory(x)
 			if  commodity is None:
@@ -88,7 +88,7 @@ class GetCommodity:
 						belong = self.user
 						).save()
 				except:
-					print(tk.format_exc())
+					pass
 		return True
 	def get_3day(self):
 		for x in range(3):
@@ -122,7 +122,7 @@ class GetCommodity:
 						belong = self.user
 						).save()
 				except:
-					print(tk.format_exc())
+					pass
 		return True
 
 
@@ -152,7 +152,7 @@ class GetCommodity:
 			except:
 				return False
 		except Exception as e:
-			print(tk.format_exc())
+			pass
 			return False
 
 
@@ -232,7 +232,7 @@ class Sku:
 
 		except Exception as e:
 
-			print(tk.format_exc())
+			pass
 
 
 

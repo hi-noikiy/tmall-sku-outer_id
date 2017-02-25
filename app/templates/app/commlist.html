@@ -2,13 +2,13 @@
 {%for x in comm%}
 <div class="col-lg-6 col-md-6 col-sm-6">
 	<div class="col-lg-4 col-sm-4 col-md-4">
-		 <a href="{%url 'detail'%}?id={{x.id}}" class="thumbnail godetail">
+		 <a href="{%url 'detail'%}?id={{x.num_iid}}" class="thumbnail godetail">
 	         <img src="{{x.pic_url}}"style="width:90px;height:90px;" 
 	         alt="淘宝主图">
 	      </a>
 	</div>
 	<div class="col-lg-8 col-md-8 col-sm-8">
-		<div class="title"><a href="{%url 'detail'%}?id={{x.id}}"class="godetail" title="">
+		<div class="title"><a href="{%url 'detail'%}?id={{x.num_iid}}"class="godetail" title="">
 			<p>{{x.title}}</p>	</a>				
 		</div>
 		<div class="outer">

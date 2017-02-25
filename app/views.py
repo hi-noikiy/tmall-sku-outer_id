@@ -334,7 +334,7 @@ def detail(request):
        
         if "id" in request.GET:
            
-            objects = get_object_or_404(Commodity,id=int(request.GET["id"]))
+            objects = get_object_or_404(Commodity,num_iid=int(request.GET["id"]))
             sku_lis = SKU.objects.filter(num_iid = objects)
             if len(sku_lis)==0:
                 skus= Sku(request)
