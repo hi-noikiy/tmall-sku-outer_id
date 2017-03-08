@@ -189,7 +189,7 @@ def about(request):
 
 
 
-        comm = Commodity.objects.filter(Q).order_by("id")[index[0]:index[1]]
+        comm = Commodity.objects.filter(belong=request.user).filter(Q).order_by("id")[index[0]:index[1]]
       
 
         return render(
@@ -439,7 +439,7 @@ def clothe(request):
         return render(request,
             "app/clothe.html",
             {"title":"查看衣服类型",
-            "clothe":Clothe.objects.all()}
+            "clothe":Clothe.objects.filter(belong = request.user)}
             )
 
 
@@ -579,6 +579,9 @@ def updata(request):
                             break
         up = Sku(request)
         rep = up.update(sku.num_iid.num_iid,request.user.User_ex.appkey.codelength)
+
+
+        
         if rep:
             sku.num_iid.sync = True
             sku.num_iid.save()

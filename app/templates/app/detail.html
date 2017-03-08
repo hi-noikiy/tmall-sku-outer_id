@@ -74,7 +74,18 @@
 					<div class="text-center">
 						<small >颜色:{{x.od_color}}</small>
 						<br>
-					<small >原编码:<br>{{x.od_outer_id}}</small>
+					<small >编码:<br>{%if user.User_ex.appkey.codelength%}
+									{%if long_guid%}
+									{{X.long_guid}}
+									{%else%}
+									{{x.od_outer_id}}
+									{%endif%}
+									{%else%}
+									{%if guid%}
+									{{X.guid}}
+									{%else%}
+									{{x.od_outer_id}}
+									{%endif%}{%endif%}</small>
 					</div>
 					
 				</td>
