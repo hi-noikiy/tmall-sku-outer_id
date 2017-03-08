@@ -308,7 +308,7 @@ def sync(request):
             "app/commlist.html",
             { 
             'title':'商品列表',
-                'comm':Commodity.objects.all()[:50],
+                'comm':Commodity.objects.filter(belong = request.user)[:50],
                 'year':datetime.now().year,
             })
 
@@ -369,7 +369,7 @@ def detail(request):
                                 
                         "pic":x.pic_url})
             return render(request,"app/detail.html",{"title":"商品详情","comm":objects,"sku":sku2,
-                "clothe":Clothe.objects.all()})
+                "clothe":Clothe.objects.filter(belong = request.user)})
     if request.method=="POST" :
         if "id" in request.POST :
             objects = get_object_or_404(Commodity,id=int(request.POST["id"]))
